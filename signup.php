@@ -1,26 +1,11 @@
-<!--
-Author: Colorlib
-Author URL: https://colorlib.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Creative Colorlib SignUp Form</title>
+    <title>Book Browser-Sign-In</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <script type="application/x-javascript">
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
-
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
     <!-- boostrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -32,12 +17,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- //Custom Theme files -->
     <!-- web font -->
     <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
-    <!-- //web font -->
+
 </head>
 
-<body>
+<body style="background: url(//images//1.jpg);"  > 
+<?php
+  include 'navigation-bar.php';
+  ?>
     <!-- main -->
-    <div class="container">
+    <div class="container" style="padding-top:75px;">
         <div class="row">
             <div class="col-lg-3 col-md-2"></div>
             <div class="col-lg-6 col-md-8 login-box">
@@ -84,7 +72,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                             </div>
                             <div class="col-6   ">
-                                <a href="login222.html" class="already">
+                                <a href="login.php" class="already">
                                     <p>Already have an account</p>
                                 </a>
 
@@ -94,9 +82,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </form>
                     </div>
                 </div>
-
+                </div>
             </div>
         </div>
+
+          <!-- Footer -->
+  <?php
+  include "credits-layer.php";
+  ?>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/bootstrap/bootstrap.js"></script>
+  <script src="vendor/bootstrap/bootstrap.bundle.js"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+  </script>
+
+
 </body>
 
 </html>

@@ -1,8 +1,9 @@
 body {
-  background: #003a5c;
   font-family: "Roboto", sans-serif;
-  background-image: url("/images/cry.jpg");
-}
+  background-image: url("//images//cry.jpg");
+ 
+  background-color: #c40000;
+} 
 
 .login-box {
   margin-top: 50px;
@@ -25,14 +26,11 @@ body {
   color: #2283fa;
 }
 
-
 .login-form {
   margin-top: 25px;
 
   text-align: left;
 }
-
-
 
 input[type="text"] {
   background-color: #1a2226;

@@ -4,10 +4,9 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
 
-  <title>Small Business - Start Bootstrap Template</title>
+
+  <title>Book Browser-Home</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,47 +24,10 @@
 </head>
 
 <body>
-
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark   fixed-top" style="background-color: #001b2e;">
-    <div class="container">
-      <a class="navbar-brand" href="#">Book Browser</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Catagory
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown"
-              style=" background-color:   #001b2e ; border: none;">
-              <a class="dropdown-item mydropdown-item" href="#">All </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item mydropdown-item" href="#"> Information Tec </a>
-              <a class="dropdown-item mydropdown-item" href="#">Managment</a>
-
-              <a class="dropdown-item mydropdown-item" href="#">Law</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-
-
-
+  <!-- navigation -->
+  <?php
+  include 'navigation-bar.php';
+  ?>
   <!-- Page Content -->
   <div class="container">
     <div style="padding-top: 75px;"></div>
@@ -243,11 +205,9 @@
 
 
   <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Book Browser 2020 <br>Made By EACMS</p>
-    </div>
-  </footer>
+  <?php
+  include "credits-layer.php";
+  ?>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
