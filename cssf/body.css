@@ -12,3 +12,13 @@ html {
   padding: 0;
   background: rgb(0, 0, 22) !important;
 }
+/* //nav bar */
+.mydropdown-item {
+  color: rgb(180, 180, 180);
+  border: none;
+}
+
+.mydropdown-item:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(15, 0, 146, 0.541);
+}
