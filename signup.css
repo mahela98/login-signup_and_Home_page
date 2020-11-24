@@ -1,10 +1,13 @@
 body {
   font-family: "Roboto", sans-serif;
-  background-image: url("//images//cry.jpg");
- 
-  background-color: #c40000;
-} 
+  background-image: url('./images/study2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;  
 
+}
+.mybackground{
+  background-color: #0700168e;
+}
 .login-box {
   margin-top: 50px;
   margin-bottom: 100px;

@@ -2,226 +2,125 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-  <title>Book Browser-Home</title>
+    <title>Book Browser-Home</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
 
-  <link href="cssf/body.css" rel="stylesheet">
-  <link rel="stylesheet" href="cssf/searchbar_with_options.css">
+    <link href="cssf/body.css" rel="stylesheet">
+    <link rel="stylesheet" href="cssf/searchbar_with_options.css">
 
 
 </head>
 
-<body>
-  <!-- navigation -->
-  <?php
+<body  style=" background-image: url('./images/study.jpg');  background-repeat: no-repeat;
+  background-size: cover;">
+    <!-- navigation -->
+    <?php
   include 'navigation-bar.php';
   ?>
-  <!-- Page Content -->
-  <div class="container">
-    <div style="padding-top: 75px;"></div>
-    <!-- Content Row -->
-    <div class="row">
-      <!-- searchbar -->
+    <!-- Page Content -->
+    <div class=" mybackground">
+    <div class="container ">
+        <div style="padding-top: 75px;"></div>
+        <!-- Content Row -->
+        <div class="row">
+            <!-- searchbar -->
 
-      <div class="col-md-12 mb-5">
-        <section class="search-sec">
-          <div class="container">
-            <form action="#" method="post" novalidate="novalidate">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 p-0">
-                      <input type="text" class="form-control search-slt" placeholder="Enter Search">
+            <div class="col-md-12 mb-5">
+                <section class="search-sec">
+                    <div class="container">
+                        <form action="#" method="post" novalidate="novalidate">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 p-0">
+                                            <input type="text" class="form-control search-slt"
+                                                placeholder="Enter Search">
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                            <select class="form-control search-slt">
+                                                <option>Choose Catagory</option>
+
+                                                <option>
+                                                    <a>
+                                                        <p>&#9733; Information Tec</p>
+                                                    </a href="#">
+                                                </option>
+                                                <option>
+                                                    <a>
+                                                        <p>&#9733; Managment</p>
+                                                    </a href="#">
+                                                </option>
+                                                <option>
+                                                    <a>
+                                                        <p>&#9733; Law</p>
+                                                    </a href="#">
+                                                </option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                            <button type="button" class="btn btn-danger wrn-btn">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                      <select class="form-control search-slt">
-                        <option>Choose Catagory</option>
+                </section>
 
-                        <option>
-                          <a>
-                            <p>&#9733; Information Tec</p>
-                          </a href="#">
-                        </option>
-                        <option>
-                          <a>
-                            <p>&#9733; Managment</p>
-                          </a href="#">
-                        </option>
-                        <option>
-                          <a>
-                            <p>&#9733; Law</p>
-                          </a href="#">
-                        </option>
-
-                      </select>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                      <button type="button" class="btn btn-danger wrn-btn">Search</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-        </section>
-
-        <!-- content -->
-      </div>
-      <div class="col-md-3 mb-5">
-        <div class="card h-10" style="background-color: rgb(255, 255, 255); color: rgb(43, 0, 71);">
-          <div class="card-body">
-            <h2 class="card-title">Crysis</h2>
-            <img src="images/1.jpg" alt="crysis" style="width: 100%;" srcset="">
-            <p class="card-text">
-              Author : Emual joge <br>Likes : 12</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">More Info</a>
-          </div>
-        </div>
-      </div>
+                <!-- content -->
+            </div>
+            <!--  item bo should place here -->
+            <?php
+            include 'item-box.php';
+            ?>
+            <?php
+            include 'item-box.php';
+            ?>
+            <?php
+            include 'item-box.php';
+            ?>
+            <?php
+            include 'item-box.php';
+            ?>
+            <?php
+            include 'item-box.php';
+            ?>
 
 
-      <div class="col-md-3 mb-5">
-        <div class="card h-10" style="background-color: rgb(255, 255, 255); color: rgb(43, 0, 71);">
-          <div class="card-body">
-            <h2 class="card-title">Crysis</h2>
-            <img src="images/Wallpaper (222).jpg" alt="crysis" style="width:100%;" srcset="">
-            <p class="card-text">
-              Author : Emual joge <br>Likes : 12</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">More Info</a>
-          </div>
         </div>
-      </div>
-      <div class="col-md-3 mb-5">
-        <div class="card h-10" style="background-color: rgb(255, 255, 255); color: rgb(43, 0, 71);">
-          <div class="card-body">
-            <h2 class="card-title">Crysis</h2>
-            <img src="images/Wallpaper (222).jpg" alt="crysis" style="width:100%;" srcset="">
-            <p class="card-text">
-              Author : Emual joge <br>Likes : 12</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">More Info</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 mb-5">
-        <div class="card h-10" style="background-color: rgb(255, 255, 255); color: rgb(43, 0, 71);">
-          <div class="card-body">
-            <h2 class="card-title">Crysis</h2>
-            <img src="images/Wallpaper (222).jpg" alt="crysis" style="width:100%;" srcset="">
-            <p class="card-text">
-              Author : Emual joge <br>Likes : 12</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">More Info</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 mb-5">
-        <div class="card h-10" style="background-color: rgb(255, 255, 255); color: rgb(43, 0, 71);">
-          <div class="card-body">
-            <h2 class="card-title">Crysis</h2>
-            <img src="images/Wallpaper (222).jpg" alt="crysis" style="width:100%;" srcset="">
-            <p class="card-text">
-              Author : Emual joge <br>Likes : 12</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">More Info</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 mb-5">
-        <div class="card h-10" style="background-color: rgb(255, 255, 255); color: rgb(43, 0, 71);">
-          <div class="card-body">
-            <h2 class="card-title">Crysis</h2>
-            <img src="images/Wallpaper (222).jpg" alt="crysis" style="width:100%;" srcset="">
-            <p class="card-text">
-              Author : Emual joge <br>Likes : 12</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">More Info</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 mb-5">
-        <div class="card h-10" style="background-color: rgb(255, 255, 255); color: rgb(43, 0, 71);">
-          <div class="card-body">
-            <h2 class="card-title">Crysis</h2>
-            <img src="images/Wallpaper (222).jpg" alt="crysis" style="width:100%;" srcset="">
-            <p class="card-text">
-              Author : Emual joge <br>Likes : 12</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">More Info</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 mb-5">
-        <div class="card h-10" style="background-color: rgb(255, 255, 255); color: rgb(43, 0, 71);">
-          <div class="card-body">
-            <h2 class="card-title">Crysis</h2>
-            <img src="images/Wallpaper (222).jpg" alt="crysis" style="width:100%;" srcset="">
-            <p class="card-text">
-              Author : Emual joge <br>Likes : 12</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">More Info</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 mb-5">
-        <div class="card h-10" style="background-color: rgb(255, 255, 255); color: rgb(43, 0, 71);">
-          <div class="card-body">
-            <h2 class="card-title">Crysis</h2>
-            <img src="images/Wallpaper (222).jpg" alt="crysis" style="width:100%;" srcset="">
-            <p class="card-text">
-              Author : Emual joge <br>Likes : 12</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">More Info</a>
-          </div>
-        </div>
-      </div>
+        <!-- /.row -->
+
     </div>
-    <!-- /.row -->
 
-  </div>
-
-
-  <!-- Footer -->
-  <?php
+    </div>
+    <!-- Footer -->
+    <?php
   include "credits-layer.php";
   ?>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/bootstrap/bootstrap.js"></script>
-  <script src="vendor/bootstrap/bootstrap.bundle.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/bootstrap/bootstrap.js"></script>
+    <script src="vendor/bootstrap/bootstrap.bundle.js"></script>
 
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-  </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
 
 </body>
 

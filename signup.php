@@ -16,95 +16,97 @@
     <link href="signup.css" rel="stylesheet" type="text/css" media="all" />
     <!-- //Custom Theme files -->
     <!-- web font -->
-    <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+
 
 </head>
 
-<body style="background: url(//images//1.jpg);"  > 
-<?php
+<body>
+
+    <?php
   include 'navigation-bar.php';
   ?>
-    <!-- main -->
-    <div class="container" style="padding-top:75px;">
-        <div class="row">
-            <div class="col-lg-3 col-md-2"></div>
-            <div class="col-lg-6 col-md-8 login-box">
+    <div class="mybackground">
+        <!-- main -->
+        <div class="container" style="padding-top:75px;">
+            <div class="row">
+                <div class="col-lg-3 col-md-2"></div>
+                <div class="col-lg-6 col-md-8 login-box">
 
-                <div class="col-lg-12 login-title">
-                    Register
-                </div>
+                    <div class="col-lg-12 login-title">
+                        Register
+                    </div>
 
-                <div class="col-lg-12 login-form">
                     <div class="col-lg-12 login-form">
-                        <form>
-                            <div class="form-group">
-                                <label class="form-control-label">EMAIL</label>
-                                <input type="email" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">FULL NAME</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">USER NAME</label>
-                                <input type="text" class="form-control">
-                            </div>
+                        <div class="col-lg-12 login-form">
+                            <form>
+                                <div class="form-group">
+                                    <label class="form-control-label">EMAIL</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">FULL NAME</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">USER NAME</label>
+                                    <input type="text" class="form-control">
+                                </div>
 
-                            <div class="form-group">
-                                <label class="form-control-label">PASSWORD</label>
-                                <input type="password" class="form-control" i>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">RE-ENTER YOUR PASSWORD</label>
-                                <input type="password" class="form-control" i>
-                            </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">PASSWORD</label>
+                                    <input type="password" class="form-control" i>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">RE-ENTER YOUR PASSWORD</label>
+                                    <input type="password" class="form-control" i>
+                                </div>
 
-                            <div class="col-lg-12 loginbttm">
-
-
+                                <div class="col-lg-12 loginbttm">
 
 
-                                <div class="col-lg-12  lg-padding">
-                                    <button type="button" class="btn btn-primary btn-lg btn-block">Register
-                                    </button>
+
+
+                                    <div class="col-lg-12  lg-padding">
+                                        <button type="button" class="btn btn-primary btn-lg btn-block">Register
+                                        </button>
+                                    </div>
+
+
+                                </div>
+                                <div class="col-6   ">
+                                    <a href="login.php" class="already">
+                                        <p>Already have an account</p>
+                                    </a>
+
                                 </div>
 
 
-                            </div>
-                            <div class="col-6   ">
-                                <a href="login.php" class="already">
-                                    <p>Already have an account</p>
-                                </a>
-
-                            </div>
-
-
-                        </form>
+                            </form>
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
         </div>
-
-          <!-- Footer -->
-  <?php
+    </div>
+    <!-- Footer -->
+    <?php
   include "credits-layer.php";
   ?>
 
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/bootstrap/bootstrap.js"></script>
-  <script src="vendor/bootstrap/bootstrap.bundle.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/bootstrap/bootstrap.js"></script>
+    <script src="vendor/bootstrap/bootstrap.bundle.js"></script>
 
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-  </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
 
 
 </body>
