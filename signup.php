@@ -38,7 +38,7 @@
 
                     <div class="col-lg-12 login-form">
                         <div class="col-lg-12 login-form">
-                            <form action="includes/signup.inc.php" method="post">
+                            <form action="includes/signup-inc.php" method="POST">
                                 <div class="form-group">
                                     <label class="form-control-label">EMAIL</label>
                                     <input type="email" class="form-control" name="email">
@@ -49,7 +49,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-label">USER NAME</label>
-                                    <input type="text" class="form-control" name="username">
+                                    <input type="text" class="form-control" name="userName">
                                 </div>
 
                                 <div class="form-group">
@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-label">RE-ENTER YOUR PASSWORD</label>
-                                    <input type="password" class="form-control" name="password_rep">
+                                    <input type="password" class="form-control" name="passwordRep">
                                 </div>
 
                                 <div class="col-lg-12 loginbttm">
@@ -67,7 +67,7 @@
 
 
                                     <div class="col-lg-12  lg-padding">
-                                        <button type="button" class="btn btn-primary btn-lg btn-block" name="submit">Register
+                                        <button type="submit" class="btn btn-primary btn-lg btn-block" name="submit">Register
                                         </button>
                                     </div>
 

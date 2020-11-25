@@ -50,7 +50,7 @@
                             </div>
                             <div class="col-lg-12 loginbttm">
                                 <div class="col-lg-12  lg-padding">
-                                    <button type="button" class="btn btn-primary btn-lg btn-block">Login
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Login
                                     </button>
                                 </div>
                             </div>
