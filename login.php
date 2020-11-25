@@ -39,31 +39,20 @@
 
                 <div class="col-lg-12 login-form">
                     <div class="col-lg-12 login-form">
-                        <form>
+                        <form  action="includes/login.inc.php" method="post">
                             <div class="form-group">
                                 <label class="form-control-label">EMAIL</label>
                                 <input type="email" class="form-control">
                             </div>
-
-
-
                             <div class="form-group">
                                 <label class="form-control-label">PASSWORD</label>
                                 <input type="password" class="form-control" i>
                             </div>
-
-
                             <div class="col-lg-12 loginbttm">
-
-
-
-
                                 <div class="col-lg-12  lg-padding">
                                     <button type="button" class="btn btn-primary btn-lg btn-block">Login
                                     </button>
                                 </div>
-
-
                             </div>
                             <div class="col-6   ">
                                 <a href="signup.php" class=" already">
