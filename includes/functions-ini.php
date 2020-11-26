@@ -43,7 +43,8 @@ function passwordMatch($password,$passwordRep){
 function usernameExists($conn,$userName,$email){
  $sql = "SELECT * FROM users WHERE userName = ? OR userEmail = ?;";
 $stmt = mysqli_stmt_init($conn);
-if (!mysqli_stmt_init($stmt,$sql)) {
+
+if (!mysqli_stmt_prepare($stmt,$sql)) {
     header("location: ../signup.php?error=stmtFaild1");
     exit();
 }
@@ -65,21 +66,22 @@ mysqli_stmt_close($stmt);
 
 
 function createUser($conn,$email,$fullName,$userName,$password){
-    $sql = "INSERT INTO users (userEmail,fullName,UserName,userPassword) VALUES (?,?,?,?)  ;";
-   $stmt = mysqli_stmt_init($conn);
-   if (!mysqli_stmt_init($stmt,$sql)) {
+    $stmt = mysqli_stmt_init($conn);
+    $sql = "INSERT INTO users (userEmail,fullName,userName,userPassword) VALUES (?,?,?,?)  ;";
+  
+   if (!mysqli_stmt_prepare($stmt,$sql)) {
        header("location: ../signup.php?error=stmtFaild2");
        exit();
    }
 $hashedPassword = password_hash($password,PASSWORD_DEFAULT);
 
 
-   mysqli_stmt_bind_param($stmt,"ssss",$email,$fullName,$userName,$password);
+   mysqli_stmt_bind_param($stmt,"ssss",$email,$fullName,$userName,$hashedPassword);
    mysqli_stmt_execute($stmt); 
 
    mysqli_stmt_close($stmt);
 
-   header("location: ../signup.php?error=none");
+   header("location: ../index1.php?signin=successfull");
    exit();
 
    
