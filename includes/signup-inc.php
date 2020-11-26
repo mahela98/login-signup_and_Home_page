@@ -35,7 +35,7 @@ if (isset($_POST["submit"])) {
 
     if (usernameExists($conn,$userName,$email) !==false) {
         header("location: ../signup.php?error=userNameTaken");
-        exit();
+        exit();  
     }
 
 createUser($conn,$email,$fullName,$userName,$password);

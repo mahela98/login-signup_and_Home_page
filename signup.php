@@ -62,31 +62,54 @@
                                 </div>
 
                                 <div class="col-lg-12 loginbttm">
-
-
-
-
                                     <div class="col-lg-12  lg-padding">
-                                        <button type="submit" class="btn btn-primary btn-lg btn-block" name="submit">Register
+                                        <button type="submit" class="btn btn-primary btn-lg btn-block"
+                                            name="submit">Register
                                         </button>
                                     </div>
-
-
                                 </div>
-                                <div class="col-6   ">
-                                    <a href="login.php" class="already">
-                                        <p>Already have an account</p>
-                                    </a>
-
-                                </div>
-
-
                             </form>
+                            <div class="col-6 ">
+                                <a href="login.php" class="already">
+                                    <p>Already have an account</p>
+                                </a>
+                            </div>
+
+                            <div class="col-12 ">
+                                <!-- //to display errors , should be edited -->
+                                <?php
+                               if (isset($_GET["error"])) {
+                                   if ($_GET["error"] == "emptyInput") {
+                                       echo "<p>Enter Input</p>";
+                                   }
+                                   else if ($_GET["error"] == "invalidUserName") {
+                                    echo "<p>Enter a valid User name</p>";
+                                         }
+                            
+                                    else if ($_GET["error"] == "invalidEmail") {
+                                    echo "<p>Enter a valid email</p>";}
+
+                                    else if ($_GET["error"] == "passwordsdosentmatch") {
+                                        echo "<p>Entered passwords does not match</p>";}
+
+                                        else if ($_GET["error"] == "userNameTaken") {
+                                            echo "<p>Entered user name is already taken..</p>";}
+                               }   
+
+                               ?>
+                            </div>
+
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
     <!-- Footer -->
     <?php
