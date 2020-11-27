@@ -39,18 +39,18 @@
 
                 <div class="col-lg-12 login-form">
                     <div class="col-lg-12 login-form">
-                        <form  action="includes/login.inc.php" method="post">
+                        <form  action="includes/login-inc.php" method="POST">
                             <div class="form-group">
                                 <label class="form-control-label">EMAIL</label>
-                                <input type="email" class="form-control">
+                                <input type="email" class="form-control" name="email">
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">PASSWORD</label>
-                                <input type="password" class="form-control" i>
+                                <input type="password" class="form-control" name = "password">
                             </div>
                             <div class="col-lg-12 loginbttm">
                                 <div class="col-lg-12  lg-padding">
-                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Login
+                                    <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block">Login
                                     </button>
                                 </div>
                             </div>

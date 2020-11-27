@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST["submit"])) {
-    echo "worked";
+
     $email = $_POST["email"];
     $fullName = $_POST["name"];
     $userName = $_POST["userName"];
@@ -43,6 +43,6 @@ createUser($conn,$email,$fullName,$userName,$password);
 
 }
 else{
-    header("location: ../login.php");
+    header("location: ../signup.php");
     exit();
 }
