@@ -120,51 +120,12 @@ $checkpwd=password_verify($password,$pwdhash);
         exit (); 
     }
     
-    else if ($checkpwd){
+    elseif($checkpwd){
         session_start();
-        $_SESSION["userId"]= $userIdExists["userId"];
-        $_SESSION["userName"]= $userIdExists["userName"];
-        header ("location:../index1.php?error=none");
+        // $_SESSION['login']="logedin";
+        $_SESSION['userId']= $userIdExists["userId"];
+        // $_SESSION['userEmail']= $userIdExists["userEmail"];
+        header ("location:../index1.php");
         exit (); 
             } 
 }
-
-//my function went wrong
-
-// function loginUser($conn,$email,$password){
-//     echo "functioncame";
-//     //test
-//     $sql = "SELECT * FROM users WHERE userEmail = ?;";
-//     $stmt = mysqli_stmt_init($conn);
-    
-//     if (!mysqli_stmt_prepare($stmt,$sql)) {
-//         header("location: ../login.php?error=stmtFaild3");
-//         exit();
-//     }
-//     mysqli_stmt_bind_param($stmt,"s",$email);
-//     mysqli_stmt_execute($stmt);
-    
-//     $resultData = mysqli_stmt_get_result($stmt);
-    
-//     if ($row = mysqli_fetch_assoc($resultData)) {
-//         $pwdhash = $row["userPassword"];
-    
-//         $checkpwd = password_verify($password,$pwdhash);
-//             if ($checkpwd===false) {
-//                 header ("location : ../login.php?error=wronglogin");
-//                 exit (); 
-//             }
-//             else if ($checkpwd===true){
-//                 session_start();
-//                 $_SESSION["userId"]= $userIdExists["userId"];
-//                 $_SESSION["userName"]= $userIdExists["userName"];
-//                 header ("location : ../index1.php");
-//                 exit (); }
-    
-    
-//     }else{
-       
-//         header ("location : ../login.php?error=UserDoesNotExists");
-//         exit ();
-        
-//     }
