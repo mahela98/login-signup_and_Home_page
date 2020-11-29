@@ -26,6 +26,11 @@
   include 'navigation-bar.php';
   ?>
     <div class="mybackground">
+    <?php
+
+include 'error-message.php';
+
+?>
         <!-- main -->
         <div class="container" style="padding-top:75px;">
             <div class="row">
@@ -75,29 +80,6 @@
                                 </a>
                             </div>
 
-                            <div class="col-12 ">
-                                <!-- //to display errors , should be edited -->
-                                <?php
-                               if (isset($_GET["error"])) {
-                                   if ($_GET["error"] == "emptyInput") {
-                                       echo "<p>Enter Input</p>";
-                                   }
-                                   else if ($_GET["error"] == "invalidUserName") {
-                                    echo "<p>Enter a valid User name</p>";
-                                         }
-                            
-                                    else if ($_GET["error"] == "invalidEmail") {
-                                    echo "<p>Enter a valid email</p>";}
-
-                                    else if ($_GET["error"] == "passwordsdosentmatch") {
-                                        echo "<p>Entered passwords does not match</p>";}
-
-                                        else if ($_GET["error"] == "userNameTaken") {
-                                            echo "<p>Entered user name is already taken..</p>";}
-                               }   
-
-                               ?>
-                            </div>
 
 
                         </div>

@@ -25,8 +25,14 @@
     include 'navigation-bar.php';
 
     ?>
- <div class="mybackground">
 
+
+ <div class="mybackground">
+ <?php
+
+include 'error-message.php';
+
+?>
     <!-- main -->
     <div class="container" style="padding-top:75px;">
 
@@ -66,27 +72,6 @@
                         </form>
                     </div>
                 </div>
-
-                <div class="col-12 ">
-                                <!-- //to display errors , should be edited -->
-                                <?php
-                               if (isset($_GET["error"])) {
-                                   if ($_GET["error"] == "emptyInput") {
-                                       echo "<p>Enter details</p>";
-                                   }
-                                   else if ($_GET["error"] == "UserDoesNotExists") {
-                                    echo "<p>Entered username does not exists</p>";
-                                         }
-                                         else if ($_GET["error"] == "wronglogin") {
-                                            echo "<p>Entered username or password is wrong</p>";
-                                                 }
-                            
-                               }   
-
-                               ?>
-                            </div>
-
-
             </div>
         </div>
     </div>

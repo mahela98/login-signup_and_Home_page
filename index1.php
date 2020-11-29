@@ -29,6 +29,11 @@
   ?>
     <!-- Page Content -->
     <div class=" mybackground">
+    <?php
+
+include 'error-message.php';
+
+?>
     <div class="container ">
         <div style="padding-top: 75px;"></div>
         <!-- Content Row -->
