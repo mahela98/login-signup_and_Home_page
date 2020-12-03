@@ -86,21 +86,7 @@ include 'error-message.php';
                 <!-- content -->
             </div>
             <!--  item bo should place here -->
-            <?php
-            include 'item-box.php';
-            ?>
-            <?php
-            include 'item-box.php';
-            ?>
-            <?php
-            include 'item-box.php';
-            ?>
-            <?php
-            include 'item-box.php';
-            ?>
-            <?php
-            include 'item-box.php';
-            ?>
+            
 
 
         </div>

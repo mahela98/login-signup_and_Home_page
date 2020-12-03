@@ -1,63 +1,59 @@
 
+if (isset($_POST["submit"])) {
 
-<style>
-.alert {
-  padding: 12px;
-  background-color: #e7003a;
-  color: white;
-  opacity: 1;
-  transition: opacity 0.6s;
-  margin: 0px;
-  margin-bottom: 1px;
-border: 100%;
-border-radius: 10px;
+  $quary = $_POST["quary"];
 
+  // echo $quary;
+  require_once 'addBookFunctions-ini.php';
+  require_once "dbh-inc.php";
+
+  if(emptySearch($quary)) {
+    // header("location: ../bookSearch.php");
+   exit();
+        }
+
+$sql = "SELECT bookId, bookName, authorName FROM books WHERE authorName= '$quary' OR bookName = '$quary'";
+$result = $conn->query($sql);
+
+if ($result===null) {
+  echo 'no data ';
 }
 
-.alert.success {background-color: #09b40f;}
+if (mysqli_num_rows($result) > 0) {
+  // echo "<table><tr><th>ID</th><th>Book Name</th><th>Author Name</th></tr>";
 
-
-.closebtn {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.closebtn:hover {
-  color: rgb(126, 0, 0);
-}
-</style>
-
-
-
-<div class="alert">
-  <span class="closebtn">&times;</span>  
-  <strong>Warning!</strong> Indicates a dangerous or potentially negative action.
-</div>
-
-<div class="alert success">
-  <span class="closebtn">&times;</span>  
-  <strong>Success!</strong> Indicates a successful or positive action.
-</div>
-
-
-<script>
-var close = document.getElementsByClassName("closebtn");
-var i;
-
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function(){
-    var div = this.parentElement;
-    div.style.opacity = "0";
-    setTimeout(function(){ div.style.display = "none"; }, 500);
+  echo '<table class="table table-sm table-dark">
+  <thead>
+    <tr>
+      <th scope="col">
+        <h6>#</h6>
+      </th>
+      <th scope="col">
+        <h6>Book Name</h6>
+      </th>
+      <th scope="col">
+        <h6>Author Name</h6>
+      </th>
+    </tr>
+  </thead>  <tbody>';
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "<tr><td>".$row["bookId"]."</td><td>".$row["bookName"]."</td>  <td>".$row["authorName"]."</td> </tr>";
+  
+  
+  
+  
   }
+  echo "</tbody> </table>";
+} 
+else {
+  echo "<br/> <br/><br/> 0 results found in name " . $quary;
 }
-</script>
+$conn->close();
 
+
+
+
+}
 
 
