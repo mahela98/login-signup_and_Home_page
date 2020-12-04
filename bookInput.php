@@ -12,17 +12,61 @@
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-grid.css">
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
 
+    <style>
+        .mycont{
+            background-color: rgba(110, 110, 110, 0.671);
+             padding:30px;
+             border-radius:10px ;
+             align-items: center;
+        }
+        label{
+            color:black;
+            font-size:15px;
+            font-weight :bold;
+        }
+        input{
+            border:0px;
+        }
+        textarea{
+            border:0px;
+        }
+        input:hover{
+           border-color:rgb(156, 0, 196);
+           border:0px;
+           border-bottom: 5px solid #2e009b;
+        }
+        textarea:hover{
+            border-color:rgb(156, 0, 196);
+           border:0px;
+           border-bottom: 5px solid #2e009b;
+        }
+        h1{
+            text-align: center;
+            padding:7px;
+            background-color: rgba(40, 26, 243, 0.559);
+            border-radius:10px ;
+            color:white;
+        }
+    </style>
+
 </head>
 
-<body>
+<body style=" background-image: url('images/image.jpg');  background-repeat: no-repeat;
+  background-size: cover;">
 
-    <div class="container">
+<?php
+  include 'navigation-bar.php';
+  ?>
+
+    <div class="container" style="padding-top:70px; padding-bottom:50px">
         <div class="row">
             <div class="col col-lg-6">
                 <h1>Add Books </h1>
             </div>
+            </div>
             <!-- form -->
-            <div class=" col-lg-6 col-md-12">
+            <div class="row">
+            <div class=" col-lg-6 col-md-12 mycont">
                 <form action="includes/bookInput-inc.php" method="POST">
                     <div class="form-group">
                         <label class="form-control-label">Book Name</label>
@@ -57,6 +101,24 @@
         </div>
     </div>
 
+  <!-- Footer -->
+  <?php
+  include "credits-layer.php";
+  ?>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/bootstrap/bootstrap.js"></script>
+    <script src="vendor/bootstrap/bootstrap.bundle.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
 
 
 </body>
