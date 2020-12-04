@@ -125,7 +125,7 @@ $checkpwd=password_verify($password,$pwdhash);
         // $_SESSION['login']="logedin";
         $_SESSION['userId']= $userIdExists["userId"];
         // $_SESSION['userEmail']= $userIdExists["userEmail"];
-        header ("location:../index1.php?error=successful");
+        header ("location:../bookSearch.php?error=successful");
         exit (); 
             } 
 }

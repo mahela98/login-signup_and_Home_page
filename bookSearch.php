@@ -17,11 +17,16 @@
     <?php
   include 'navigation-bar.php';
   ?>
+      <?php
+
+include 'error-message.php';
+
+?>
 
     <section class="search-sec" style="padding-top:70px; padding-bottom:50px">
         <div class="container">
         <!--  -->
-            <form action="includes/searchBooks-inc-02.php" method="post">
+            <form action="searchBooks-inc-02.php" method="post">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="row">
