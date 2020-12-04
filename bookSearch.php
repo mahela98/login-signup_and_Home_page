@@ -1,24 +1,3 @@
-<!-- <section class="search-sec">
-                    <div class="container">
-                        <form action="includes/searchBooks-inc-02.php" method="POST">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-sm-12 p-0">
-                                            <input type="text" class="form-control search-slt"
-                                                placeholder="Enter Search" name="quary">
-                                        </div>
-                                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                                            <button type="submit" name="submit" class="btn btn-danger wrn-btn">Search</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </section> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 
