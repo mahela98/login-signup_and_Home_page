@@ -12,15 +12,21 @@ if (isset($_POST["submit"])) {
     require_once 'addBookFunctions-ini.php';
    
 
-    if (emptyBookInput($bookName,$authorName!==false)) {
-        header("location:../bookInput.php?error=emptyInput");
+    if (emptyBookInput($bookName,$authorName)) {
+        header("location:../adminPre/bookInput.php?error=emptyBNandANInput");
         exit();
     }
     // have to enter other error handlers
+    if (bookNameExists($conn,$bookName,$authorName) !==false) {
+        header("location:../adminPre/bookInput.php?error=BookIsInTheDatabase");
+        exit();  
+    }
+
+
 
     createBook($conn,$bookName,$authorName,$publishedDate,$price,$discription);
 }
 else{
-header("location:../bookInput.php");
+header("location:../adminPre/bookInput.php");
     exit();
 }

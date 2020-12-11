@@ -105,7 +105,29 @@
                                                                   sign-in successful.. !
                                                               </div>';
                                                                   }
-                                                    
+
+                                                                  else if ($_GET["error"] == "emptyBNandANInput") {
+                                                                    echo '
+                                                                    <div class="alert fixed-top">
+                                                                      <span class="closebtn">&times;</span>  
+                                                                      <strong>Error !</strong>  <span>  Enter Book-name and Author-name.</span>
+                                                                    </div>';
+                                                                    }
+                                                                    else if ($_GET["error"] == "successfullyBookAdded") {
+                                                                      echo '
+                                                                      <div class="alert success fixed-top">
+                                                                      <span class="closebtn">&times;</span>
+                                                                      Book successfuly added.. !
+                                                                  </div>';
+                                                                      }
+
+                                                                      else if ($_GET["error"] == "BookIsInTheDatabase") {
+                                                                        echo '
+                                                                        <div class="alert fixed-top">
+                                                                          <span class="closebtn">&times;</span>  
+                                                                          <strong>Error !</strong>  <span>  Book is already added </span>
+                                                                        </div>';
+                                                                        }
                                }   
 
                                ?>

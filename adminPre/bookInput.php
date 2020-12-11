@@ -51,13 +51,20 @@
 
 </head>
 
-<body style=" background-image: url('images/image.jpg');  background-repeat: no-repeat;
+<body style=" background-image: url('../images/image.jpg');  background-repeat: no-repeat;
   background-size: cover;">
 
+
 <?php
-  include 'navigation-bar.php';
+  include '../navigation-bar.php';
   ?>
 
+<?php
+
+include '../error-message.php';
+
+?>
+<div style="  background-color:#0700169d;">
     <div class="container" style="padding-top:70px; padding-bottom:50px">
         <div class="row">
             <div class="col col-lg-6">
@@ -67,7 +74,7 @@
             <!-- form -->
             <div class="row">
             <div class=" col-lg-6 col-md-12 mycont">
-                <form action="includes/bookInput-inc.php" method="POST">
+                <form action="../includes/bookInput-inc.php" method="POST">
                     <div class="form-group">
                         <label class="form-control-label">Book Name</label>
                         <input type="text" class="form-control" name="bookName">
@@ -100,10 +107,10 @@
             </div>
         </div>
     </div>
-
+    </div>
   <!-- Footer -->
   <?php
-  include "credits-layer.php";
+  include "../credits-layer.php";
   ?>
 
     <!-- Bootstrap core JavaScript -->

@@ -15,7 +15,7 @@ function createBook($conn,$bookName,$authorName,$publishedDate,$price,$discripti
     $sql = "INSERT INTO books(bookName,authorName,publishedDate,price,discription) VALUES (?,?,?,?,?);";
   
    if (!mysqli_stmt_prepare($stmt,$sql)){
-       header("location: ../bookInput.php?error=stmtFaild4");
+       header("location: ../adminPre/bookInput.php?error=stmtFaild4");
        exit();
             }
 
@@ -24,7 +24,7 @@ function createBook($conn,$bookName,$authorName,$publishedDate,$price,$discripti
 
    mysqli_stmt_close($stmt);
 
-   header("location: ../bookInput.php?error=successfullyAdded");
+   header("location: ../adminPre/bookInput.php?error=successfullyBookAdded");
    exit();}
 
 //    functions in searchbar when search
@@ -39,3 +39,28 @@ function createBook($conn,$bookName,$authorName,$publishedDate,$price,$discripti
    }
    return $result;
 }
+
+//entered book name and author name are in the database
+function bookNameExists($conn,$bookName,$authorName){
+   $sql = "SELECT * FROM books WHERE bookName = ? OR authorName = ?;";
+   $stmt = mysqli_stmt_init($conn);
+   
+   if (!mysqli_stmt_prepare($stmt,$sql)) {
+       header("location: ../signup.php?error=stmtFaildAddBookEx");
+       exit();
+   }
+   mysqli_stmt_bind_param($stmt,"ss",$bookName,$authorName);
+   mysqli_stmt_execute($stmt);
+   
+   $resultData = mysqli_stmt_get_result($stmt);
+   
+   if ($row = mysqli_fetch_assoc($resultData)) {
+       return $row;
+   
+   }else{
+       $result = false;
+       return $result;
+   }
+   mysqli_stmt_close($stmt);
+   
+   }
