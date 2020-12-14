@@ -9,56 +9,35 @@
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link href="cssf/body.css" rel="stylesheet">
-<link rel="stylesheet" href="cssf/searchbar_with_options.css">
+<link href="../cssf/body.css" rel="stylesheet">
+<link rel="stylesheet" href="../cssf/searchbar_with_options.css">
 
-<body style=" background-image: url('images/study.jpg');  background-repeat: no-repeat;
+<body style=" background-image: url('../images/23.jpg');  background-repeat: no-repeat;
   background-size: cover;">
 
 <div style="  background-color:#0700169d;">
 
     <?php
-  include 'navigation-bar.php';
+  include '../navigation-bar.php';
   ?>
       <?php
 
-include 'error-message.php';
+include '../error-message.php';
 
 ?>
 
     <section class="search-sec" style="padding-top:70px; padding-bottom:50px">
         <div class="container">
         <!--  -->
-            <form action="searchBooks-inc-02.php" method="post">
+            <form action="viewUsers-inc.php" method="post">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12 p-0">
+                            <div class="col-lg-9 col-md-9 col-sm-12 p-0">
                                 <input type="text" class="form-control search-slt" placeholder="Enter Search"
-                                    name="quary">
+                                    name="quary1">
                             </div>
-                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                                <select class="form-control search-slt">
-                                    <option>Choose Catagory</option>
-
-                                    <option>
-                                        <a>
-                                            <p>&#9733; Information Tec</p>
-                                        </a href="#">
-                                    </option>
-                                    <option>
-                                        <a>
-                                            <p>&#9733; Managment</p>
-                                        </a href="#">
-                                    </option>
-                                    <option>
-                                        <a>
-                                            <p>&#9733; Law</p>
-                                        </a href="#">
-                                    </option>
-
-                                </select>
-                            </div>
+                          
                             <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                                 <button type="submit" class="btn btn-danger wrn-btn" name="submit">Search</button>
                             </div>
@@ -71,18 +50,19 @@ include 'error-message.php';
 
 <!-- table section -->
     <div class="row">
+    <div class="col-lg-12">
         <div class="col-1"></div>
         <section class="col-10">
+        <?php
+        include "user-view-inc.php";
 
-            <?php
-            include 'bookSearch-BookTable-Parts.php'
             ?>
         </section>
     </div>
-
+    </div>
     </div>
     <?php
-  include "credits-layer.php";
+  include "../credits-layer.php";
   ?>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

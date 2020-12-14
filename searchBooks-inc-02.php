@@ -14,6 +14,7 @@
 
   <body style=" background-image: url('images/study.jpg');  background-repeat: no-repeat;
   background-size: cover;">
+  <div style="  background-color:#0700169d;">
   <?php
   include 'navigation-bar.php';
   ?>
@@ -70,7 +71,7 @@
         </section>
     </div>
 
-
+    </div>
 <?php
   include "credits-layer.php";
   ?>
