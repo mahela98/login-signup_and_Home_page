@@ -14,7 +14,8 @@ session_start();
 
 
                  <?php
-                 echo isset($_SESSION['userId']);
+                //  echo isset($_SESSION['userId']);
+
                 if(isset($_SESSION['userId'])) {
 
                 echo '<li class="nav-item dropdown">
@@ -48,6 +49,7 @@ session_start();
            echo "  <li class='nav-item'> <a class='nav-link' href='#'>About</a></li> "; 
            echo "  <li class='nav-item'> <a class='nav-link' href='includes/logout-inc.php'>Logout</a></li> "; 
           }
+
           else{
             echo "  <li class='nav-item'> <a class='nav-link' href='#'>About</a></li> "; 
             echo "  <li class='nav-item'> <a class='nav-link' href='login.php'>Log-In</a></li> "; 

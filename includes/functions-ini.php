@@ -1,6 +1,6 @@
 <?php
 
-echo "functions loaded";
+// echo "functions loaded";
 function emptyInputsignup($email,$fullName,$userName,$password,$passwordRep){
      $result;
 
@@ -81,7 +81,7 @@ $hashedPassword = password_hash($password,PASSWORD_DEFAULT);
 
    mysqli_stmt_close($stmt);
 
-   header("location: ../index1.php?error=signedin");
+   header("location: ../login.php?error=signedin");
    exit();
 
    
@@ -124,8 +124,15 @@ $checkpwd=password_verify($password,$pwdhash);
         session_start();
         // $_SESSION['login']="logedin";
         $_SESSION['userId']= $userIdExists["userId"];
-        // $_SESSION['userEmail']= $userIdExists["userEmail"];
-        header ("location:../bookSearch.php?error=successful");
+        $_SESSION['adminOrNot']= $userIdExists["adminOrNot"];
+
+        if ($userIdExists["adminOrNot"]===1) {
+            header ("location:../adminPre/admin-home-page.php?error=successful");
+        }
+        else{
+            header ("location:../bookSearch.php?error=successful");
+        }
+        
         exit (); 
             } 
 }
