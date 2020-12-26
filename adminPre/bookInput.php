@@ -14,7 +14,7 @@
 
     <style>
         .mycont{
-            background-color: rgba(110, 110, 110, 0.671);
+            background-color: rgba(182, 182, 182, 0.719);
              padding:30px;
              border-radius:10px ;
              align-items: center;
@@ -33,20 +33,29 @@
         input:hover{
            border-color:rgb(156, 0, 196);
            border:0px;
-           border-bottom: 5px solid #2e009b;
+           border-bottom: 4px solid #2e009b;
         }
         textarea:hover{
             border-color:rgb(156, 0, 196);
            border:0px;
            border-bottom: 5px solid #2e009b;
         }
-        h1{
+        h2{
+            font-size: 30px;
+            font-style: normal;
             text-align: center;
             padding:7px;
             background-color: rgba(40, 26, 243, 0.559);
             border-radius:10px ;
             color:white;
         }
+        .btn{
+            background-color: rgb(0, 21, 61);
+            border: none;
+        }
+        .btn:hover {
+      background-color: rgb(54, 0, 105);
+    }
     </style>
 
 </head>
@@ -54,26 +63,26 @@
 <body style=" background-image: url('../images/image.jpg');  background-repeat: no-repeat;
   background-size: cover;">
 
-
+<!-- nav-bar -->
 <?php
-  include '../navigation-bar.php';
+include 'admin-nav-bar.php';
   ?>
 
+<!-- error message -->
 <?php
-
 include '../error-message.php';
-
 ?>
-<div style="  background-color:#0700169d;">
+
+<div style="  background-color:#3f3f3f9d;">
     <div class="container" style="padding-top:70px; padding-bottom:50px">
         <div class="row">
             <div class="col col-lg-6">
-                <h1>Add Books </h1>
+                <h2>Add Books </h2>
             </div>
             </div>
             <!-- form -->
             <div class="row">
-            <div class=" col-lg-6 col-md-12 mycont">
+            <div class="col-12 col-lg-6 col-md-12 mycont">
                 <form action="../includes/bookInput-inc.php" method="POST">
                     <div class="form-group">
                         <label class="form-control-label">Book Name</label>
@@ -92,6 +101,22 @@ include '../error-message.php';
                         <input type="number" class="form-control" name="price" placeholder="Rs.">
                     </div>
                     <div class="form-group">
+                        <label class="form-control-label">Amount</label>
+                        <input type="number" class="form-control" name="amount">
+                    </div>
+
+                    <div class="form-group">
+                        <label  class="form-control-label" for="inputState">Category</label>
+                        <select id="Category" class="form-control">
+                          <option selected>Information Tec</option>
+                          <option>Law</option>
+                          <option>Managment</option>
+                          <option>Bio Science</option>
+                          <option selected>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
                         <div class="form-group green-border-focus">
                             <label for="exampleFormControlTextarea5">Discription</label>
                             <textarea class="form-control" name="discription" id="discription" rows="3"></textarea>
@@ -109,9 +134,11 @@ include '../error-message.php';
     </div>
     </div>
   <!-- Footer -->
+
   <?php
   include "../credits-layer.php";
   ?>
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>

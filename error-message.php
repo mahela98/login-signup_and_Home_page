@@ -53,6 +53,15 @@
                                    </div>';
 
                                          }
+
+                                         else if ($_GET["error"] == "LoginFirst") {
+                                          echo '
+                                          <div class="alert fixed-top">
+                                            <span class="closebtn">&times;</span>  
+                                            <strong>Error !</strong>  <span>  LOGIN first....!</span>
+                                          </div>';
+       
+                                                }
                                          else if ($_GET["error"] == "wronglogin") {
                                             echo '
                                             <div class="alert fixed-top">
@@ -120,6 +129,8 @@
                                                                       Book successfuly added.. !
                                                                   </div>';
                                                                       }
+
+                                                                      
 
                                                                       else if ($_GET["error"] == "BookIsInTheDatabase") {
                                                                         echo '

@@ -1,4 +1,10 @@
 <?php
+session_start();
+ ?>
+
+<?php
+if(isset($_SESSION['userId'])) {
+
 if (isset($_POST["submit"])) {
 
     $bookName = $_POST["bookName"];
@@ -29,4 +35,9 @@ if (isset($_POST["submit"])) {
 else{
 header("location:../adminPre/bookInput.php");
     exit();
+}
+}
+
+else{
+    header("location:../login.php?error=LoginFirst"); 
 }
