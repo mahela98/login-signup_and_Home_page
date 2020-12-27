@@ -124,7 +124,7 @@ include 'admin-nav-bar.php';
           <div class="card-body">
             <img src="https://img.icons8.com/ios-filled/75/000000/add-user-male.png" alt="add user icon" />
             <br /><br />
-            <a href="test.php" style=" text-decoration: none; "> <button type="button" class="btn btn-primary btn-sm btn-block">Add User</button></a>
+            <a href="admin-add-user.php" style=" text-decoration: none; "> <button type="button" class="btn btn-primary btn-sm btn-block">Add User</button></a>
           </div>
         </div>
       </div>
@@ -145,7 +145,8 @@ include 'admin-nav-bar.php';
           <div class="card-body">
             <img src="https://img.icons8.com/ios-filled/75/000000/find-user-male.png " alt="Search user icon" />
             <br /><br />
-            <button type="button" class="btn btn-primary btn-sm btn-block">Search User</button>
+            <a href="viewUsers.php" style=" text-decoration: none; "> <button type="button" class="btn btn-primary btn-sm btn-block">Search User</button>
+            </a>
           </div>
         </div>
       </div>
@@ -181,14 +182,13 @@ include 'admin-nav-bar.php';
     </div>
   </div>
 
+
   <div style="padding-top: 40px;"></div>
 
+  <?php
+  include 'admin-footer.php';
 
-  <footer class="py-5" style="background-color: #060221c9;  position: relative; left: 0; bottom: 0; width: 100%;  ">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Book Browser 2020 <br>Made By EACMS</p>
-    </div>
-  </footer>
+  ?>
 
 
 

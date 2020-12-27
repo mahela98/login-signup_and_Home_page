@@ -1,5 +1,6 @@
-<?php 
 
+<?php 
+// echo 'loarded--inc';
 require_once '../includes/addBookFunctions-ini.php';
 require_once "../includes/dbh-inc.php";
 
@@ -47,7 +48,7 @@ if (mysqli_num_rows($result) > 0) {
 
 //  if the search field is empty
 elseif(empty($quary)===true ){
-$sql = "SELECT * FROM books";
+$sql = "SELECT * FROM users";
 $result = $conn->query($sql);
 
 
@@ -88,7 +89,7 @@ $result = $conn->query($sql);
 }
 
 // if there is no data on in that name
-else {
+elseif(mysqli_num_rows($result) === 0) {
   echo '<table class="table table-sm table-dark">
   <thead>
     <tr>
@@ -111,6 +112,74 @@ else {
   </tbody>
     </table>';
   }
+  else{
+    $sql = "SELECT * FROM users";
+    $result = $conn->query($sql);
+   
+      echo '<table class="table table-sm table-dark">
+      <thead>
+        <tr>
+          <th scope="col">
+            <h6>User Id</h6>
+          </th>
+          <th scope="col">
+            <h6>User Name</h6>
+          </th>
+          <th scope="col">
+            <h6>Email</h6>
+          </th>
+          <th scope="col">
+          <h6>Contact Number</h6>
+        </th>
+        </tr>
+      </thead>  <tbody>';
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+              
+              echo "<tr>
+              <td>".$row["userId"]."</td> 
+        <td>".$row["userName"]."</td> 
+        <td>".$row["userEmail"]."</td>  
+              </tr>";
+            }
+            echo "</tbody> </table>";
+  }
 $conn->close(); 
-
 } 
+
+else{
+  $sql = "SELECT * FROM users";
+  $result = $conn->query($sql);
+ 
+    echo '<table class="table table-sm table-dark">
+    <thead>
+      <tr>
+        <th scope="col">
+          <h6>User Id</h6>
+        </th>
+        <th scope="col">
+          <h6>User Name</h6>
+        </th>
+        <th scope="col">
+          <h6>Email</h6>
+        </th>
+        <th scope="col">
+        <h6>Contact Number</h6>
+      </th>
+      </tr>
+    </thead>  <tbody>';
+          // output data of each row
+          while($row = $result->fetch_assoc()) {
+            
+            echo "<tr>
+            <td>".$row["userId"]."</td> 
+            <td>".$row["userName"]."</td> 
+            <td>".$row["userEmail"]."</td>  
+            </tr>";
+          }
+          echo "</tbody> </table>";
+  
+        
+          $conn->close(); 
+          
+}
