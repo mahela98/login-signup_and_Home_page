@@ -1,3 +1,7 @@
+<?php
+session_start();
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -141,10 +145,10 @@ include '../error-message.php';
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/bootstrap/bootstrap.js"></script>
-    <script src="vendor/bootstrap/bootstrap.bundle.js"></script>
+    <script src="vendor/bootstrap/bootstrap.bundle.js"></script> -->
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

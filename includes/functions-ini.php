@@ -125,6 +125,10 @@ $checkpwd=password_verify($password,$pwdhash);
         // $_SESSION['login']="logedin";
         $_SESSION['userId']= $userIdExists["userId"];
         $_SESSION['adminOrNot']= $userIdExists["adminOrNot"];
+        $_SESSION['userEmail']= $userIdExists["userEmail"];
+        $_SESSION['userName']= $userIdExists["userName"];
+
+
 
         if ($userIdExists["adminOrNot"]===1) {
             header ("location:../adminPre/admin-home-page.php?error=successful");

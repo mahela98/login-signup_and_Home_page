@@ -33,7 +33,7 @@ if (isset($_POST["submit"])) {
     createBook($conn,$bookName,$authorName,$publishedDate,$price,$discription);
 }
 else{
-header("location:../adminPre/bookInput.php");
+header("location:../adminPre/bookInput.php?error=not working");
     exit();
 }
 }

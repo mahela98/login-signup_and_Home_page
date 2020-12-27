@@ -10,7 +10,10 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           </li>
-          <li class='nav-item'> <a class='nav-link' href='#'>Admin</a></li>
+          <?php
+          echo "  <li class='nav-item'> <a class='nav-link' href='#'>" . $_SESSION['userName'] ."</a></li> "; 
+          ?>
+         
           <li class='nav-item'> <a class='nav-link' href='#'>Contact</a></li>
           <li class='nav-item'> <a class='nav-link' href='#'>About</a></li>
           <li class='nav-item'> <a class='nav-link' href='../includes/logout-inc.php'>Logout</a></li>

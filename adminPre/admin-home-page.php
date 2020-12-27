@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['userId'])) {
+  header("location:../login.php?error=LoginFirst"); 
+}
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -118,7 +124,7 @@ include 'admin-nav-bar.php';
           <div class="card-body">
             <img src="https://img.icons8.com/ios-filled/75/000000/add-user-male.png" alt="add user icon" />
             <br /><br />
-            <button type="button" class="btn btn-primary btn-sm btn-block">Add User</button>
+            <a href="test.php" style=" text-decoration: none; "> <button type="button" class="btn btn-primary btn-sm btn-block">Add User</button></a>
           </div>
         </div>
       </div>
