@@ -1,7 +1,7 @@
 <?php 
 
-require_once 'adminPre/admin-includes/addBookFunctions-ini.php';
-require_once "includes/dbh-inc.php";
+require_once 'admin-includes/addBookFunctions-ini.php';
+require_once "../includes/dbh-inc.php";
 
 if (isset($_POST["submit"])) {
 
@@ -41,7 +41,7 @@ if (mysqli_num_rows($result) > 0) {
     $message = $row["bookId"] ;
     echo "<tr>
     <td>".$row["bookId"]."</td> 
-    <td> <a href='one-book-view.php?message=".$message." '>".$row["bookName"]." </a> </td> 
+    <td> <a href='admin-one-book-view.php?message=".$message." '>".$row["bookName"]." </a> </td> 
     <td>".$row["authorName"]."</td> 
     <td>".$ava."</td> 
     </tr> ";
@@ -85,7 +85,7 @@ $result = $conn->query($sql);
     $message = $row["bookId"] ;
     echo "<tr>
     <td>".$row["bookId"]."</td> 
-    <td> <a href='one-book-view.php?message=".$message." '>".$row["bookName"]." </a> </td> 
+    <td> <a href='admin-one-book-view.php?message=".$message." '>".$row["bookName"]." </a> </td> 
     <td>".$row["authorName"]."</td> 
     <td>".$ava."</td> 
     </tr> ";
@@ -157,7 +157,7 @@ else{
     $message = $row["bookId"] ;
     echo "<tr>
     <td>".$row["bookId"]."</td> 
-    <td> <a href='one-book-view.php?message=".$message." '>".$row["bookName"]." </a> </td> 
+    <td> <a href='admin-one-book-view.php?message=".$message." '>".$row["bookName"]." </a> </td> 
     <td>".$row["authorName"]."</td> 
     <td>".$ava."</td> 
     </tr> ";

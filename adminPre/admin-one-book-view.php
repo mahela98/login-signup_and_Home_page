@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['userId'])) {
+  header("location:../login.php?error=LoginFirst"); 
+}
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +14,7 @@
     <link rel="stylesheet" href="cssf/profile-page.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="cssf/searchbar_with_options.css">
+    <link rel="stylesheet" href="../cssf/searchbar_with_options.css">
     <style>
         body {
             background-color: rgb(218, 218, 218);
@@ -24,7 +30,7 @@
         }
 
         .mybtn:hover {
-            background-color: rgb(68, 0, 124);
+            background-color: rgba(143, 140, 0, 0.842);
 
         }
 
@@ -37,7 +43,7 @@
         }
 
         .mybtnl:hover {
-            background-color: rgb(68, 0, 124);
+            background-color: rgb(160, 0, 27);
 
         }
     </style>
@@ -46,16 +52,16 @@
 <body>
     <?php
 
-include 'navigation-bar.php';
+include 'admin-nav-bar.php';
 
-include 'search-bar.php';
+include 'admin-search-bar.php';
 
 ?>
 
 <!-- data from database -->
     <?php
 $bookId1 = $_GET["message"];
-require_once "includes/dbh-inc.php";
+require_once "../includes/dbh-inc.php";
 
 $sql = "SELECT * FROM books WHERE bookId = '$bookId1' ";
 $result = $conn->query($sql);
@@ -65,7 +71,7 @@ $row = $result->fetch_assoc();
 
 // echo $row["bookName"];
 // echo $row["authorName"];
-
+$message = $row["bookId"] ;
 echo '
     <div class="container">
         <div class="main-body">
@@ -74,7 +80,7 @@ echo '
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex flex-column align-items-center text-center">
-                                <img src="images/23.jpg" alt="Admin" width="280" height="200">
+                                <img src="../images/23.jpg" alt="Admin" width="280" height="200">
                                 <div class="mt-3">
                                     <h4> '.$row["bookName"] .'</h4>
                                     <p class="text-secondary mb-1">'.$row["authorName"] .'</p>
@@ -144,23 +150,32 @@ echo '
                     </div>
 
                 </div>
+                ';
                 
+
+
+                echo '
                 <div class="col-6 col-lg-3">
-                    <button type="submit" class="mybtnl btn btn-primary">Like</button>
+                    <a href="admin-includes/admin-book-delete-inc.php?message='.$message.'">
+                        <button type="submit" class="mybtnl btn btn-primary">Delete</button>
+                    </a>
 
                 </div>
                 <div class="col-6 col-lg-9">
-                    <button type="submit" class="mybtn btn btn-primary">Borrow</button>
+                    <a href="admin-includes/admin-book-edit-inc.php?message='.$message.'">
+                    <button type="submit" class="mybtn btn btn-primary">Edit</button>
+                </a>
 
-                </div>
-
+                </div> ';
+               
+                echo '
             </div>
         </div>
     </div>';
     ?>
-
+<div style="padding-bottom: 40px;"></div>
     <?php
-  include "credits-layer.php";
+  include "../credits-layer.php";
 ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

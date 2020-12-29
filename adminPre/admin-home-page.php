@@ -156,8 +156,9 @@ include 'admin-nav-bar.php';
           <div class="card-body">
             <img src="https://img.icons8.com/ios-filled/75/000000/book-and-pencil.png" alt="search book icon" />
             <br /><br />
+            <a href="admin-book-search01.php" style=" text-decoration: none; ">
             <button type="button" class="btn btn-primary btn-sm btn-block">Search Book</button>
-
+            </a>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 
 <?php 
 // echo 'loarded--inc';
-require_once '../includes/addBookFunctions-ini.php';
+require_once 'admin-includes/addBookFunctions-ini.php';
 require_once "../includes/dbh-inc.php";
 
 if (isset($_POST["submit"])) {
@@ -39,7 +39,7 @@ if (mysqli_num_rows($result) > 0) {
     <td>".$row["userId"]."</td> 
     <td>".$row["userName"]."</td> 
     <td>".$row["userEmail"]."</td> 
- 
+    <td>".$row["mobile"]."</td> 
     </tr>";
 
   }
@@ -78,7 +78,9 @@ $result = $conn->query($sql);
           echo "<tr>
           <td>".$row["userId"]."</td> 
     <td>".$row["userName"]."</td> 
-    <td>".$row["userEmail"]."</td>  
+    <td>".$row["userEmail"]."</td> 
+    <td>".$row["mobile"]."</td> 
+ 
           </tr>";
         }
         echo "</tbody> </table>";
@@ -140,6 +142,8 @@ elseif(mysqli_num_rows($result) === 0) {
               <td>".$row["userId"]."</td> 
         <td>".$row["userName"]."</td> 
         <td>".$row["userEmail"]."</td>  
+        <td>".$row["mobile"]."</td> 
+
               </tr>";
             }
             echo "</tbody> </table>";
@@ -175,6 +179,8 @@ else{
             <td>".$row["userId"]."</td> 
             <td>".$row["userName"]."</td> 
             <td>".$row["userEmail"]."</td>  
+            <td>".$row["mobile"]."</td> 
+
             </tr>";
           }
           echo "</tbody> </table>";

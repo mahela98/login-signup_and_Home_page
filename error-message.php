@@ -69,6 +69,13 @@
                                               <strong>Error !</strong>  <span>  Entered Username or Password is Wrong.</span>
                                             </div>';
                                                  }
+                                                 else if ($_GET["error"] == "adminBookDeleted") {
+                                                  echo '
+                                                  <div class="alert fixed-top">
+                                                    <span class="closebtn">&times;</span>  
+                                                    <strong>Book Deleted !</strong>
+                                                  </div>';
+                                                       }
                                                  else if ($_GET["error"] == "successful") {
                                                     echo '
                                                     <div class="alert success fixed-top">
