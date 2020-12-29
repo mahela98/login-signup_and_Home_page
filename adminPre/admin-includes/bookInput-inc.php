@@ -11,29 +11,31 @@ if (isset($_POST["submit"])) {
     $authorName = $_POST["authorName"];
     $publishedDate = $_POST["publishedDate"];
     $price = $_POST["price"];
+    $amount = $_POST["amount"];
+    $category = $_POST["category"];
     $discription = $_POST["discription"];
    
 
-    require_once 'dbh-inc.php';
+    require_once '../../includes/dbh-inc.php';
     require_once 'addBookFunctions-ini.php';
    
 
     if (emptyBookInput($bookName,$authorName)) {
-        header("location:../adminPre/bookInput.php?error=emptyBNandANInput");
+        header("location:../bookInput.php?error=emptyBNandANInput");
         exit();
     }
     // have to enter other error handlers
     if (bookNameExists($conn,$bookName,$authorName) !==false) {
-        header("location:../adminPre/bookInput.php?error=BookIsInTheDatabase");
+        header("location:../bookInput.php?error=BookIsInTheDatabase");
         exit();  
     }
 
 
 
-    createBook($conn,$bookName,$authorName,$publishedDate,$price,$discription);
+    createBook($conn,$bookName,$authorName,$publishedDate,$price,$amount,$category,$discription);
 }
 else{
-header("location:../adminPre/bookInput.php?error=not working");
+header("location:../bookInput.php?error=not working");
     exit();
 }
 }

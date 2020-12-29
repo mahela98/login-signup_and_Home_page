@@ -87,10 +87,11 @@ include '../error-message.php';
             <!-- form -->
             <div class="row">
             <div class="col-12 col-lg-6 col-md-12 mycont">
-                <form action="../includes/bookInput-inc.php" method="POST">
+            <!-- ../includes/bookInput-inc.php -->
+                <form action="admin-includes/bookInput-inc.php" method="POST">
                     <div class="form-group">
                         <label class="form-control-label">Book Name</label>
-                        <input type="text" class="form-control" name="bookName">
+                        <input type="text" class="form-control" name="bookName" >
                     </div>
                     <div class="form-group">
                         <label class="form-control-label">Author Name</label>
@@ -111,7 +112,7 @@ include '../error-message.php';
 
                     <div class="form-group">
                         <label  class="form-control-label" for="inputState">Category</label>
-                        <select id="Category" class="form-control">
+                        <select id="category" class="form-control" name= "category">
                           <option selected>Information Tec</option>
                           <option>Law</option>
                           <option>Managment</option>

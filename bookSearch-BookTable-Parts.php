@@ -1,6 +1,6 @@
 <?php 
 
-require_once 'includes/addBookFunctions-ini.php';
+require_once 'adminPre/admin-includes/addBookFunctions-ini.php';
 require_once "includes/dbh-inc.php";
 
 if (isset($_POST["submit"])) {
@@ -38,12 +38,13 @@ if (mysqli_num_rows($result) > 0) {
       $ava = 'Availabile';
     }else{ $ava = 'Not Availabile';}
 
+$message = $row["bookId"] ;
     echo "<tr>
     <td>".$row["bookId"]."</td> 
-    <td>".$row["bookName"]."</td> 
+    <td> <a href='one-book-view.php?message=".$message." '>".$row["bookName"]." </a> </td> 
     <td>".$row["authorName"]."</td> 
     <td>".$ava."</td> 
-    </tr>";
+    </tr> ";
 
   }
   echo "</tbody> </table>";
