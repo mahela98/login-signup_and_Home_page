@@ -50,6 +50,7 @@ if(!isset($_SESSION['userId'])) {
 </head>
 
 <body>
+    
     <?php
 
 include 'admin-nav-bar.php';
@@ -58,7 +59,6 @@ include 'admin-search-bar.php';
 
 ?>
 
-<!-- data from database -->
     <?php
 $bookId1 = $_GET["message"];
 require_once "../includes/dbh-inc.php";
@@ -159,13 +159,12 @@ echo '
                     <a href="admin-includes/admin-book-delete-inc.php?message='.$message.'">
                         <button type="submit" class="mybtnl btn btn-primary">Delete</button>
                     </a>
-
                 </div>
+
                 <div class="col-6 col-lg-9">
                     <a href="admin-includes/admin-book-edit-inc.php?message='.$message.'">
                     <button type="submit" class="mybtn btn btn-primary">Edit</button>
                 </a>
-
                 </div> ';
                
                 echo '
