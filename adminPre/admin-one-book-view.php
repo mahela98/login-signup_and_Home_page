@@ -60,7 +60,10 @@ include 'admin-search-bar.php';
 ?>
 
     <?php
-$bookId1 = $_GET["message"];
+    $bookId1 = $_GET["message"];
+
+// $bookId1 = $_GET["message"];
+
 require_once "../includes/dbh-inc.php";
 
 $sql = "SELECT * FROM books WHERE bookId = '$bookId1' ";
@@ -162,7 +165,7 @@ echo '
                 </div>
 
                 <div class="col-6 col-lg-9">
-                    <a href="admin-includes/admin-book-edit-inc.php?message='.$message.'">
+                    <a href="admin-book-edit-inc.php?message='.$message.'">
                     <button type="submit" class="mybtn btn btn-primary">Edit</button>
                 </a>
                 </div> ';

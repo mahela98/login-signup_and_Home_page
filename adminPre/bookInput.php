@@ -113,7 +113,7 @@ include '../error-message.php';
                     <div class="form-group">
                         <label  class="form-control-label" for="inputState">Category</label>
                         <select id="category" class="form-control" name= "category">
-                          <option selected>Information Tec</option>
+                          <option >Information Tec</option>
                           <option>Law</option>
                           <option>Managment</option>
                           <option>Bio Science</option>

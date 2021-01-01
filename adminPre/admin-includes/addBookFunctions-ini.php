@@ -64,3 +64,20 @@ function bookNameExists($conn,$bookName,$authorName){
    mysqli_stmt_close($stmt);
    
    }
+
+//    edit book functions
+   function editBook ($conn,$bookId1,$bookName,$authorName,$publishedDate,$price,$amount,$category,$discription){
+
+    $sql = " UPDATE books SET bookName='$bookName' , authorName= '$authorName' , 
+    publishedDate = '$publishedDate' , price ='$price',amount='$amount', category='$category', discription='$discription'
+    WHERE bookId = '$bookId1';";
+
+    if (mysqli_query($conn, $sql)) {
+        header('location:../admin-book-edit-inc.php?message='.$bookId1.' &error=bookeditedsuccessfuly');
+    } else {
+        echo "Error updating record: " . mysqli_error($conn);
+      }
+    exit();
+
+
+}

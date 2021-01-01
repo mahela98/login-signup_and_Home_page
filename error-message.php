@@ -62,6 +62,16 @@
                                           </div>';
        
                                                 }
+
+                                                else if ($_GET["error"] == "emptyInputbookNameinedit") {
+                                                  echo '
+                                                  <div class="alert fixed-top">
+                                                    <span class="closebtn">&times;</span>  
+                                                    <strong>Error !</strong>  <span>  Enter Book Name and Author name....!</span>
+                                                  </div>';
+               
+                                                        }
+
                                          else if ($_GET["error"] == "wronglogin") {
                                             echo '
                                             <div class="alert fixed-top">
@@ -143,6 +153,13 @@
                                                                         User successfuly added.. !
                                                                     </div>';
                                                                         }
+                                                                        else if ($_GET["error"] == "bookeditedsuccessfuly") {
+                                                                          echo '
+                                                                          <div class="alert success fixed-top">
+                                                                          <span class="closebtn">&times;</span>
+                                                                          Book successfuly added.. !
+                                                                      </div>';
+                                                                          }
                                                                       
 
                                                                       else if ($_GET["error"] == "BookIsInTheDatabase") {
