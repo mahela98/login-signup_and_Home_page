@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -146,11 +147,13 @@ echo '
                 </div>
                 
                 <div class="col-6 col-lg-3">
+                
                     <button type="submit" class="mybtnl btn btn-primary">Like</button>
-
                 </div>
                 <div class="col-6 col-lg-9">
+                    <a href="book-borrow.php?message='.$bookId1.' ">
                     <button type="submit" class="mybtn btn btn-primary">Borrow</button>
+                </a>
 
                 </div>
 
