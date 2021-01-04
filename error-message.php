@@ -160,6 +160,13 @@
                                                                           Book successfuly added.. !
                                                                       </div>';
                                                                           }
+                                                                          else if ($_GET["error"] == "bookReturnedSuccessfully") {
+                                                                            echo '
+                                                                            <div class="alert success fixed-top">
+                                                                            <span class="closebtn">&times;</span>
+                                                                            Book successfuly Returned.. !
+                                                                        </div>';
+                                                                            }
                                                                       
 
                                                                       else if ($_GET["error"] == "BookIsInTheDatabase") {
