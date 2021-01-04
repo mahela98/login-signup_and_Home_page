@@ -146,12 +146,10 @@ echo '
 
                 </div>
                 
-                <div class="col-6 col-lg-3">
-                
-                    <button type="submit" class="mybtnl btn btn-primary">Like</button>
-                </div> ';
+                ';
 
-              
+                include "like-button.php";
+
                 include "borrow-button.php";
 
 

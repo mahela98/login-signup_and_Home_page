@@ -14,5 +14,6 @@ function borrowBook($conn,$userId,$bookId,$borrowDate,$returnDate){
 
    mysqli_stmt_close($stmt);
 
-   header("location: ../bookSearch.php?error=successfullyBorrowed");
+//    header("location: ../bookSearch.php?error=successfullyBorrowed");
+   header('location:../one-book-view.php?message='.$bookId.' &error=successfullyBorrowed');
    exit();}
