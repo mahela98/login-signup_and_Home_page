@@ -160,7 +160,7 @@ echo '
                 echo '
                 <div class="col-6 col-lg-3">
                     <a href="admin-includes/admin-book-delete-inc.php?message='.$message.'">
-                        <button type="submit" class="mybtnl btn btn-primary">Delete</button>
+                        <button  class="mybtnl btn btn-primary">Delete</button>
                     </a>
                 </div>
 

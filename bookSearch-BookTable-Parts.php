@@ -2,7 +2,7 @@
 
 require_once 'adminPre/admin-includes/addBookFunctions-ini.php';
 require_once "includes/dbh-inc.php";
-
+$bookNumber=1;
 if (isset($_POST["submit"])) {
 
     $quary = $_POST["quary"];
@@ -32,7 +32,7 @@ if (mysqli_num_rows($result) > 0) {
     </th>
     </tr>
   </thead>  <tbody>';
-  $bookNumber=1;
+  
   // output data of each row
   while($row = $result->fetch_assoc()) {
     if ($row["bookAvailability"]==1) {

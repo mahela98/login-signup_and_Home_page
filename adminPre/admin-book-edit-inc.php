@@ -222,16 +222,16 @@ echo '
 
                 echo '
                 <div class="col-6 col-lg-3">
-                    <a href="admin-book-delete-inc.php?message='.$message.'">
-                        <button class="mybtnl btn btn-primary">Delete</button>
-                    </a>
+                <a href="admin-includes/admin-book-delete-inc.php?message='.$message.'">
+                <button class="mybtnl btn btn-primary">Delete</button>
+            </a>
                 </div>
 
                 <div class="col-6 col-lg-9">
-                    <!-- <a href="admin-includes/book-edit-inc.php?message='.$message.'"> -->
+             
                   
                     <button type="submit" name="submit" class="mybtn btn btn-primary">SAVE</button>
-                <!-- </a> -->
+             
                 </div>
                 </form> ';
                
