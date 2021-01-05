@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="cssf/searchbar_with_options.css">
+
     <style>
         body {
             background-color: rgb(218, 218, 218);
@@ -20,7 +21,7 @@
             margin-top: 25px;
             padding: 5px;
             width: 100%;
-            background-color: rgb(31, 128, 255);
+            background-color: rgb(69, 0, 179);
 
         }
 
@@ -31,7 +32,7 @@
 
         .mybtnl {
             border: 12px;
-            background-color: rgb(31, 128, 255);
+            background-color: rgb(69, 0, 179);
             margin-top: 25px;
             padding: 5px;
             width: 100%;
@@ -44,16 +45,18 @@
     </style>
 </head>
 
-<body>
+
     <?php
+    echo '<body style=" background-image: url(\'images/study.jpg\');  background-repeat: no-repeat;
+    background-size: cover;">
+    <div style="    background-color: #0700169d;">
+    ' ;
 
 include 'navigation-bar.php';
 include 'error-message.php';
 include 'search-bar.php';
 
 ?>
-
-<!-- data from database -->
     <?php
 $bookId1 = $_GET["message"];
 require_once "includes/dbh-inc.php";
@@ -78,7 +81,7 @@ echo '
                                 <img src="images/23.jpg" alt="Admin" width="280" height="200">
                                 <div class="mt-3">
                                     <h4> '.$row["bookName"] .'</h4>
-                                    <p class="text-secondary mb-1">'.$row["authorName"] .'</p>
+                                    <p class="text-secondary mb-1">By: '.$row["authorName"] .'</p>
                                    
                                 </div>
                             </div>
@@ -156,7 +159,9 @@ echo '
 echo '
             </div>
         </div>
-    </div>';
+    </div>
+    </div>
+    ';
     
     ?>
 

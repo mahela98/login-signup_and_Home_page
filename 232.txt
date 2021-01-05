@@ -1,0 +1,19 @@
+SELECT 
+    borrowbooks.borrowDate, books.bookName, books.authorName
+FROM 
+borrowbooks
+INNER JOIN 
+books 
+ON
+borrowbooks.bookId=books.bookId
+WHERE 
+borrowbooks.userId=13;
+
+SELECT borrowbooks.borrowDate, books.bookName, books.authorName FROM borrowbooks INNER JOIN books ON borrowbooks.bookId=books.bookId WHERE borrowbooks.userId=13 AND borrowbooks.returned=0;
+
+SELECT borrowbooks.bookId, books.bookName, books.authorName,borrowbooks.borrowDate,
+borrowbooks.returnDate FROM borrowbooks 
+INNER JOIN books 
+ON 
+borrowbooks.bookId=books.bookId 
+WHERE borrowbooks.userId=13 AND borrowbooks.returned=0;
