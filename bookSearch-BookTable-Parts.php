@@ -32,6 +32,7 @@ if (mysqli_num_rows($result) > 0) {
     </th>
     </tr>
   </thead>  <tbody>';
+  $bookNumber=1;
   // output data of each row
   while($row = $result->fetch_assoc()) {
     if ($row["bookAvailability"]==1) {
@@ -40,12 +41,12 @@ if (mysqli_num_rows($result) > 0) {
 
     $message = $row["bookId"] ;
     echo "<tr>
-    <td>".$row["bookId"]."</td> 
+    <td>". $bookNumber."</td> 
     <td> <a href='one-book-view.php?message=".$message." '>".$row["bookName"]." </a> </td> 
     <td>".$row["authorName"]."</td> 
     <td>".$ava."</td> 
     </tr> ";
-
+$bookNumber++;
   }
   echo "</tbody> </table>";
 } 
@@ -84,11 +85,13 @@ $result = $conn->query($sql);
      
     $message = $row["bookId"] ;
     echo "<tr>
-    <td>".$row["bookId"]."</td> 
+    <td>".$bookNumber."</td> 
     <td> <a href='one-book-view.php?message=".$message." '>".$row["bookName"]." </a> </td> 
     <td>".$row["authorName"]."</td> 
     <td>".$ava."</td> 
     </tr> ";
+
+    $bookNumber++;
         }
         echo "</tbody> </table>";
 
@@ -156,11 +159,12 @@ else{
        
     $message = $row["bookId"] ;
     echo "<tr>
-    <td>".$row["bookId"]."</td> 
+    <td>".$bookNumber."</td> 
     <td> <a href='one-book-view.php?message=".$message." '>".$row["bookName"]." </a> </td> 
     <td>".$row["authorName"]."</td> 
     <td>".$ava."</td> 
     </tr> ";
+    $bookNumber++;
           }
           echo "</tbody> </table>";
   

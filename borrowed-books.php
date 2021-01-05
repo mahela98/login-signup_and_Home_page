@@ -12,7 +12,7 @@
 <link href="cssf/body.css" rel="stylesheet">
 
 
-<body style=" background-image: url('images/study.jpg');  background-repeat: no-repeat;
+<body style=" background-image: url('images/image.jpg');  background-repeat: no-repeat;
   background-size: cover;">
 
     <div style="  background-color:#0700169d;">

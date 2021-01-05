@@ -13,7 +13,7 @@
 
     <style>
         body {
-            background-color: rgb(218, 218, 218);
+            background-color: rgba(6, 0, 31, 0.822);
         }
 
         .mybtn {
@@ -41,6 +41,9 @@
         .mybtnl:hover {
             background-color: rgb(68, 0, 124);
 
+        }
+        .text-secondary{
+            color: rgba(18, 0, 51, 0.863) !important;
         }
     </style>
 </head>
@@ -71,26 +74,26 @@ $row = $result->fetch_assoc();
 // echo $row["authorName"];
 
 echo '
-    <div class="container">
+    <div class="container" >
         <div class="main-body">
             <div class="row gutters-sm">
-                <div class="col-md-4 mb-3">
-                    <div class="card">
+                <div class="col-md-4 mb-3" >
+                    <div class="card" style="background-color: rgba(236, 236, 236, 0.76);">
                         <div class="card-body">
                             <div class="d-flex flex-column align-items-center text-center">
                                 <img src="images/23.jpg" alt="Admin" width="280" height="200">
                                 <div class="mt-3">
                                     <h4> '.$row["bookName"] .'</h4>
-                                    <p class="text-secondary mb-1">By: '.$row["authorName"] .'</p>
+                                    <p class="text-secondary mb-1" style="color: rgb(39, 37, 37) !important;">By: '.$row["authorName"] .'</p>
                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8">
-                    <div class="card mb-3">
-                        <div class="card-body">
+                <div class="col-md-8" >
+                    <div class="card mb-3 " style="background-color: rgba(248, 248, 248, 0.822) !important;">
+                        <div class="card-body" >
                             <div class="row">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Book Name</h6>
