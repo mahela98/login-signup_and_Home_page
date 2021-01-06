@@ -45,7 +45,7 @@ session_start();
 
                 // </li>';
            echo "  <li class='nav-item'> <a class='nav-link' href='borrowed-books.php'>Borrowed Books</a></li> ";
-           echo "  <li class='nav-item'> <a class='nav-link' href='#'>Profile</a></li> ";
+           echo "  <li class='nav-item'> <a class='nav-link' href='profile-page.php'>Profile</a></li> ";
            echo "  <li class='nav-item'> <a class='nav-link' href='#'>Contact</a></li> "; 
            echo "  <li class='nav-item'> <a class='nav-link' href='#'>About</a></li> "; 
            echo "  <li class='nav-item'> <a class='nav-link' href='includes/logout-inc.php'>Logout</a></li> "; 
