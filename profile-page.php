@@ -87,8 +87,11 @@ $row = $result->fetch_assoc();
                                                     <hr>
                                                     <div class="row">
                                                      
-                                                        <div class="col-10">
-                                                            <a style="font-size: 12px; color: darkblue;" href="#">Change Password</a>
+                                                        <div class="col-10">  ';
+                                                        include 'popup.php';
+
+                                                echo '
+                                                        
                                                         </div>
                                                         <div class="col-2 text-secondary" style="padding-right: 5px; padding-left: 5px;">
                                                             <a href="profile-edit.php">
