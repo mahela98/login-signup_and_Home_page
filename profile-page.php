@@ -18,6 +18,7 @@ background-size: cover;  background-color:#020016e7; ">
 
         <?php
             include 'navigation-bar.php';
+            include 'error-message.php';
             ?>
         <div style="padding-bottom: 70px;"></div>
         <div class="container">
@@ -36,7 +37,7 @@ background-size: cover;  background-color:#020016e7; ">
 
 $userID=$_SESSION["userId"];
 require_once "includes/dbh-inc.php";
-$sql = "SELECT * FROM users WHERE userId = 13";
+$sql = "SELECT * FROM users WHERE userId = '$userID'";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 ?>

@@ -139,6 +139,13 @@
                                                                       <strong>Error !</strong>  <span>  Enter Book-name and Author-name.</span>
                                                                     </div>';
                                                                     }
+                                                                    else if ($_GET["error"] == "errorInChangingPWEnteredPWIsWrong") {
+                                                                      echo '
+                                                                      <div class="alert fixed-top">
+                                                                        <span class="closebtn">&times;</span>  
+                                                                        <strong>Error !</strong>  <span> In changing password..!</span>
+                                                                      </div>';
+                                                                      }
                                                                     else if ($_GET["error"] == "successfullyBookAdded") {
                                                                       echo '
                                                                       <div class="alert success fixed-top">
@@ -175,7 +182,13 @@
                                                                             Book successfuly Returned.. !
                                                                         </div>';
                                                                             }
-                                                                      
+                                                                            else if ($_GET["error"] == "passwordeChangedSuccessfuly") {
+                                                                              echo '
+                                                                              <div class="alert success fixed-top">
+                                                                              <span class="closebtn">&times;</span>
+                                                                              Password Changed Successfuly.. !
+                                                                          </div>';
+                                                                              }
 
                                                                       else if ($_GET["error"] == "BookIsInTheDatabase") {
                                                                         echo '

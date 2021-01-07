@@ -60,19 +60,19 @@ id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden=
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="#" method="post">
+      <form action="includes/change-password-inc.php" method="post">
       <div class="modal-body">
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Current Password:</label>
-            <input type="text" class="form-control myinp01" id="recipient-name">
+            <input type="password" class="form-control myinp01" id="currentPassword" name="currentPassword">
           </div>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">New Password:</label>
-            <input type="text" class="form-control myinp01" id="recipient-name">
+            <input type="password" class="form-control myinp01" id="newPassword" name="newPassword">
           </div>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label ">Re-Enter New Password:</label>
-            <input type="text" class="form-control myinp01" id="recipient-name">
+            <input type="password" class="form-control myinp01" id="reNewPassword" name="reNewPassword">
           </div>
       </div>
       <div class="modal-footer">
