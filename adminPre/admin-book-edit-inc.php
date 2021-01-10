@@ -200,7 +200,7 @@ echo '
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                   
-                                    <textarea class="form-control myinp01" rows="3" name="discription"> '.$row["discription"].'</textarea>
+                                    <textarea class="form-control myinp01" rows="3" id="discription" name="discription"> '."$discription".' </textarea>
                                 </div>
                             </div>
                             <hr>

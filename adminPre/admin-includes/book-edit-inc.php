@@ -13,12 +13,12 @@ if (isset($_POST["submit"])) {
     $price = $_POST["price"];
     $amount = $_POST["amount"];
     $category = $_POST["category"];
-    $discription = $_POST["discription"];
-   
-    // echo "edit inc working";
+    $discription1 =$_POST["discription"];
 
     require_once '../../includes/dbh-inc.php';
     require_once 'addBookFunctions-ini.php';
+    // escapes illigel charactors
+    $discription = mysqli_real_escape_string($conn, $discription1);
 
 
     if (emptyBookInput($bookName,$authorName)) {
