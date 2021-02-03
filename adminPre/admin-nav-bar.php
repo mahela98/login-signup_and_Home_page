@@ -1,4 +1,6 @@
-
+<?php
+// session_start();
+ ?>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark   fixed-top" style="background-color: #001b2e;">
     <div class="container">
@@ -11,7 +13,7 @@
         <ul class="navbar-nav ml-auto">
           </li>
           <?php
-          echo "  <li class='nav-item'> <a class='nav-link' href='#'>" . $_SESSION['userName'] ."</a></li> "; 
+          echo "  <li class='nav-item'> <a class='nav-link' href='admin-profile-view.php'>Admin</a></li> "; 
           ?>
          
           <li class='nav-item'> <a class='nav-link' href='#'>Contact</a></li>

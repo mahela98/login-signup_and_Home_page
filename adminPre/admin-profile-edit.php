@@ -1,3 +1,6 @@
+<?php
+session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,14 +29,15 @@
 
 </head>
 
-<body style="background-image: url('images/study.jpg');  background-repeat: no-repeat;
+<body style="background-image: url('../images/study.jpg');  background-repeat: no-repeat;
 background-size: cover;  background-color:#020016e7; ">
 
     <section style=" background-color:#020016c5; ">
         <div style="  padding-bottom: 0px;">
 
-            <?php
-            include 'navigation-bar.php';
+        <?php
+            include 'admin-nav-bar.php';
+            include '../error-message.php';
             ?>
             <div style="padding-bottom: 70px;"></div>
             <div class="container">
@@ -43,12 +47,12 @@ background-size: cover;  background-color:#020016e7; ">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex flex-column align-items-center text-center">
-                                        <img src="images/image.jpg" alt="Admin" class="rounded-circle" width="150"
+                                        <img src="../images/image.jpg" alt="Admin" class="rounded-circle" width="150"
                                             height="150">
                                         <?php 
 
 $userID=$_SESSION["userId"];
-require_once "includes/dbh-inc.php";
+require_once "../includes/dbh-inc.php";
 $sql = "SELECT * FROM users WHERE userId = '$userID'";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
@@ -63,7 +67,7 @@ $row = $result->fetch_assoc();
                                             <div class="card mb-3">
                                                 <div class="card-body">
                                                
-                                                <form action="includes/profile-edit-inc.php" method="POST">
+                                                <form action="admin-includes/admin-profile-edit-inc.php" method="POST">
                                                     <div class="row">
                                                         <div class="col-sm-3">
                                                             <h6 class="mb-0">Full Name</h6>
@@ -80,7 +84,7 @@ $row = $result->fetch_assoc();
                                                         </div>
                                                         <div class="col-sm-9 text-secondary">
                                                         <input class="myinp01"
-                                                        type="text" value="'.$row["userName"].'"  name="userName">
+                                                        type="text" value="'.($row["userName"]).'"  name="userName">
                                                         </div>
                                                     </div>
                                                     <hr>
@@ -107,8 +111,7 @@ $row = $result->fetch_assoc();
                                                     <div class="row">
                                                      
                                                         <div class="col-10">
-                                                           
-                                                        </div>
+                                                       </div>
                                                         <div class="col-2 text-secondary" style="padding-right: 15px; padding-left: 5px; ">
                                                             <button type="submit"  name="submit" style="padding:2px; padding-right: 15px; padding-left: 15px;"
                                                               class="btn btn-primary">
@@ -136,30 +139,16 @@ $row = $result->fetch_assoc();
             </div>
 
         </div>
-        <div style="
-    background-color: rgba(255, 255, 255, 0.932);
-     padding: 5px;
-     border: none;
-     outline: none;
-     ">
-            <h5 style="padding-top: 2px; text-align: center;">Borrowed Books</h5>
-
-        </div>
+        
 
 
-        <div style="padding-bottom: 10px; padding-top: 10px;">
 
-            <?php
-    include 'item-box.php';
-
-?>
-        </div>
 
         </div>
 
 
         <?php
-    include 'credits-layer.php';
+    include 'admin-footer.php';
     
     ?>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

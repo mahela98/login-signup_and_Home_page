@@ -78,7 +78,7 @@ echo '
         <div class="main-body">
             <div class="row gutters-sm">
                 <div class="col-md-4 mb-3" >
-                    <div class="card" style="background-color: rgba(236, 236, 236, 0.76);">
+                    <div class="card" style="background-color: rgba(255, 255, 255, 0.877);">
                         <div class="card-body">
                             <div class="d-flex flex-column align-items-center text-center">
                                 <img src="images/23.jpg" alt="Admin" width="280" height="200">
@@ -92,7 +92,7 @@ echo '
                     </div>
                 </div>
                 <div class="col-md-8" >
-                    <div class="card mb-3 " style="background-color: rgba(248, 248, 248, 0.822) !important;">
+                    <div class="card mb-3 " style="background-color: rgba(243, 243, 243, 0.979) !important;">
                         <div class="card-body" >
                             <div class="row">
                                 <div class="col-sm-3">
