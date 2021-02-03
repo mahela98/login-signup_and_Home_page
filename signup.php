@@ -43,27 +43,27 @@ include 'error-message.php';
 
                     <div class="col-lg-12 login-form">
                         <div class="col-lg-12 login-form">
-                            <form action="includes/signup-inc.php" method="POST">
+                            <form name="userSignIn" action="includes/signup-inc.php" onsubmit="return validateForm();" method="POST">
                                 <div class="form-group">
-                                    <label class="form-control-label">EMAIL</label>
-                                    <input type="email" class="form-control" name="email">
+                                    <label class="form-control-label" >EMAIL</label>
+                                    <input type="email" class="form-control" name="email" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-label">FULL NAME</label>
-                                    <input type="text" class="form-control" name="name">
+                                    <input type="text" class="form-control" name="name" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-label">USER NAME</label>
-                                    <input type="text" class="form-control" name="userName">
+                                    <input type="text" class="form-control" name="userName" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="form-control-label">PASSWORD</label>
-                                    <input type="password" class="form-control" name="password">
+                                    <input type="password" class="form-control" name="password" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-label">RE-ENTER YOUR PASSWORD</label>
-                                    <input type="password" class="form-control" name="passwordRep">
+                                    <input type="password" class="form-control" name="passwordRep" required>
                                 </div>
 
                                 <div class="col-lg-12 loginbttm">
@@ -100,6 +100,7 @@ include 'error-message.php';
 
 
     <!-- Bootstrap core JavaScript -->
+    <script src="javaScript/userSignIn-Validation.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/bootstrap/bootstrap.js"></script>
