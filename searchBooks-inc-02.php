@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['userId'])) {
+  header("location:login.php?error=LoginFirst"); 
+}
+ ?>
 <!DOCTYPE html>
   <html lang="en">
 

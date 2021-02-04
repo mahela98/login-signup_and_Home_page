@@ -1,6 +1,4 @@
-<?php
-session_start();
- ?>
+
  <!-- Navigation -->
  <nav class="navbar navbar-expand-lg navbar-dark   fixed-top" style="background-color: #001b2e;">
      <div class="container">

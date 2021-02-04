@@ -79,7 +79,7 @@ include 'error-message.php';
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-label">USER NAME</label>
-                                    <input type="text" class="form-control" name="userName" id="username" required maxlength="20" minlength="6" >
+                                    <input type="text" class="form-control" name="userName" id="username"  maxlength="20" minlength="6" >
                                     <!--  -->
                                 </div>
 
