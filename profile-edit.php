@@ -28,6 +28,19 @@ if(!isset($_SESSION['userId'])) {
             border: none;
         }
 
+        .input-field:valid {
+            color: rgb(255, 255, 255) !important;
+        }
+        .input-field:invalid {
+            color: red !important;
+        }
+        .red {
+            color: red !important;
+        }
+        .green {
+            color: rgb(255, 255, 255) !important;
+        }
+
 </style>
 
 </head>
@@ -76,7 +89,7 @@ $row = $result->fetch_assoc();
                                                         </div>
                                                         <div class="col-sm-9 text-secondary">
                                                         <input class="myinp01"
-                                                        type="text" value="'.$row["fullName"].'"  name="fullName">
+                                                        type="text" value="'.$row["fullName"].'"  name="fullName" required>
                                                         </div>
                                                     </div>
                                                     <hr>
@@ -86,7 +99,7 @@ $row = $result->fetch_assoc();
                                                         </div>
                                                         <div class="col-sm-9 text-secondary">
                                                         <input class="myinp01"
-                                                        type="text" value="'.$row["userName"].'"  name="userName">
+                                                        type="text" value="'.$row["userName"].'"  name="userName" minlength="6" maxlength="20"  required>
                                                         </div>
                                                     </div>
                                                     <hr>
@@ -96,7 +109,7 @@ $row = $result->fetch_assoc();
                                                         </div>
                                                         <div class="col-sm-9 text-secondary">
                                                         <input class="myinp01"
-                                                        type="text" value="'.$row["userEmail"].'"  name="userEmail">
+                                                        type="email" value="'.$row["userEmail"].'"  name="userEmail" id= "userEmail" required>
                                                         </div>
                                                     </div>
                                                     <hr>
@@ -106,7 +119,7 @@ $row = $result->fetch_assoc();
                                                         </div>
                                                         <div class="col-sm-9 text-secondary">
                                                         <input class="myinp01"
-                                                        type="text" value="'.$row["mobile"].'"  name="mobile">
+                                                        type="tel" value="'.$row["mobile"].'"  name="mobile" pattern="[0-9]{10}"  required>
                                                         </div>
                                                     </div>
                                                     <hr>
@@ -168,6 +181,7 @@ $row = $result->fetch_assoc();
     include 'credits-layer.php';
     
     ?>
+        <script src="javaScript/userSignIn-Validation.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
         </script>

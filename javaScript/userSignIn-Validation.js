@@ -2,6 +2,7 @@
 // global variable
 var vlidation;
 
+//email validation
 function emailValidation(e) {
     var x=document.forms["myForm"]["email"].value;
     var atpos=x.indexOf("@");
@@ -16,6 +17,7 @@ function emailValidation(e) {
   vlidation = 0;
  }
 }
+
 
 //call when form submited
 function validateForm(){

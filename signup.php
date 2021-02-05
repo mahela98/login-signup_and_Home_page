@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Book Browser-Sign-In</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,89 +8,72 @@
     <!-- boostrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <!-- vendor\bootstrap -->
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+   
+    <!-- <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css"> -->
     <!-- Custom Theme files -->
     <link href="cssf/signup.css" rel="stylesheet" type="text/css" media="all" />
-    <!-- //Custom Theme files -->
-    <!-- web font -->
-<style>
-   
-/* input:valid {
-    border-bottom: 2px solid  #00ee20 !important;
-} */
-/* input:invalid{
-  border-bottom: 2px solid #da0000 ;
-
-} */
-
-.input-field:valid{
-color: #44e444; 
-}
-.input-field:invalid{
-color: red; 
-}
-
+    <style>
+        .input-field:valid {
+            color: rgb(255, 255, 255) !important;
+        }
+        .input-field:invalid {
+            color: red !important;
+        }
         .red {
             color: red !important;
         }
-        .green{
-            color: rgb(0, 214, 0) !important;
+        .green {
+            color: rgb(255, 255, 255) !important;
         }
-    
-</style>
-
+    </style>
 </head>
 
 <body>
-
     <?php
   include 'navigation-bar.php';
   ?>
     <div class="mybackground">
-    <?php
-
+        <?php
 include 'error-message.php';
-
 ?>
         <!-- main -->
         <div class="container" style="padding-top:75px;">
             <div class="row">
                 <div class="col-lg-3 col-md-2"></div>
                 <div class="col-lg-6 col-md-8 login-box">
-
                     <div class="col-lg-12 login-title">
                         Register
                     </div>
-
                     <div class="col-lg-12 login-form">
                         <div class="col-lg-12 login-form">
-                           
-                            <form name="myForm" action="includes/signup-inc.php" onsubmit="return validateForm();" method="POST">
+
+                            <form name="myForm" action="includes/signup-inc.php" onsubmit="return validateForm();"
+                                method="POST">
                                 <div class="form-group">
-                                    <label class="form-control-label" >EMAIL</label>
-                                    <input type="email" class="form-control" name="email" id="email"  required>
+                                    <label class="form-control-label">EMAIL</label>
+                                    <input type="email" class="form-control" name="email" id="email" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-label">FULL NAME</label>
-                                    <input type="text" class="form-control  input-field" name="name" id="name">
+                                    <input type="text" class="form-control  input-field" name="name" id="name" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-label">USER NAME</label>
-                                    <input type="text" class="form-control" name="userName" id="username"  maxlength="20" minlength="6" >
-                                    <!--  -->
+                                    <input type="text" class="form-control input-field" name="userName" id="username"
+                                        maxlength="20" minlength="6" required>
+                              
                                 </div>
-
                                 <div class="form-group">
                                     <label class="form-control-label">PASSWORD</label>
-                                    <input type="password" class="form-control  input-field" id="password" name="password" required  minlength="6" maxlength="20">
+                                    <input type="password" class="form-control  input-field" id="password"
+                                        name="password" required minlength="6" maxlength="20">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-label">RE-ENTER YOUR PASSWORD</label>
-                                    <input type="password" class="form-control  input-field" name="passwordRep" required  minlength="6" maxlength="20" >
+                                    <input type="password" class="form-control  input-field" name="passwordRep" required
+                                        minlength="6" maxlength="20">
                                 </div>
-
                                 <div class="col-lg-12 loginbttm">
                                     <div class="col-lg-12  lg-padding">
                                         <button type="submit" id="submit" class="btn btn-primary btn-lg btn-block"
@@ -105,19 +87,11 @@ include 'error-message.php';
                                     <p>Already have an account</p>
                                 </a>
                             </div>
-
-
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
     <!-- Footer -->
     <?php
@@ -127,10 +101,10 @@ include 'error-message.php';
 
     <!-- Bootstrap core JavaScript -->
     <script src="javaScript/userSignIn-Validation.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/bootstrap/bootstrap.js"></script>
-    <script src="vendor/bootstrap/bootstrap.bundle.js"></script>
+    <script src="vendor/bootstrap/bootstrap.bundle.js"></script> -->
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
