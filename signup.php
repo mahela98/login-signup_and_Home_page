@@ -67,7 +67,7 @@ include 'error-message.php';
                                 <div class="form-group">
                                     <label class="form-control-label">PASSWORD</label>
                                     <input type="password" class="form-control  input-field" id="password"
-                                        name="password" required minlength="6" maxlength="20">
+                                        name="password" required minlength="6" maxlength="20" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-label">RE-ENTER YOUR PASSWORD</label>

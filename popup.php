@@ -68,11 +68,11 @@ id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden=
           </div>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">New Password:</label>
-            <input type="password" class="form-control myinp01" id="newPassword" name="newPassword">
+            <input type="password" class="form-control myinp01" id="newPassword" name="newPassword" required minlength="6" maxlength="20" required>
           </div>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label ">Re-Enter New Password:</label>
-            <input type="password" class="form-control myinp01" id="reNewPassword" name="reNewPassword">
+            <input type="password" class="form-control myinp01" id="reNewPassword" name="reNewPassword" required minlength="6" maxlength="20" required>
           </div>
       </div>
       <div class="modal-footer">
