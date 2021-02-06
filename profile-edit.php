@@ -48,7 +48,8 @@ if(!isset($_SESSION['userId'])) {
 <body style="background-image: url('images/study.jpg');  background-repeat: no-repeat;
 background-size: cover;  background-color:#020016e7; ">
 
-    <section style=" background-color:#020016c5; ">
+    <section style="  background-image: linear-gradient(to bottom right, rgba(0, 132, 255, 0.733), rgba(255, 255, 0, 0.705)) !important;
+    " >
         <div style="  padding-bottom: 0px;">
 
             <?php

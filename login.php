@@ -27,7 +27,8 @@
     ?>
 
 
- <div class="mybackground">
+ <div class="mybackground" style="  background-image: linear-gradient(to bottom right, rgba(0, 132, 255, 0.733), rgba(255, 255, 0, 0.705)) !important;
+    ">
  <?php
 
 include 'error-message.php';

@@ -20,7 +20,8 @@ if(!isset($_SESSION['userId'])) {
 
   <body style=" background-image: url('images/study.jpg');  background-repeat: no-repeat;
   background-size: cover;">
-  <div style="  background-color:#0700169d;">
+  <div style="  background-image: linear-gradient(to bottom right, rgba(0, 132, 255, 0.733), rgba(255, 255, 0, 0.705)) !important;
+    " >
   <?php
   include 'navigation-bar.php';
   ?>
