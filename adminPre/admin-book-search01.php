@@ -18,10 +18,11 @@ if(!isset($_SESSION['userId'])) {
 <link href="cssf/body.css" rel="stylesheet">
 <link rel="stylesheet" href="../cssf/searchbar_with_options.css">
 
-<body style=" background-image: url('../images/study.jpg');  background-repeat: no-repeat;
-  background-size: cover;">
+<body  style="  background-image: linear-gradient(to bottom right, rgb(0, 180, 156), rgb(34, 0, 46)) !important;
+  background-repeat: no-repeat;
+  background-size: cover; ">
 
-<div style="  background-color:#0700169d;">
+<div style="padding-bottom: 100px;" >
 
     <?php
   include 'admin-nav-bar.php';

@@ -14,14 +14,27 @@ if(!isset($_SESSION['userId'])) {
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link href="admin-css/registerUser.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="admin-css/registerUser.css"   />
+
+<style>
+    .form-control-label {
+    font-size: 12px;
+    color: #00d9e9;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  .login-title {
 
 
+    color: #0073ff;
+  }
+</style>
 
 
 </head>
 
-<body style="background: none; background-color: rgb(143, 143, 143);">
+<body style="  background-image: linear-gradient(to bottom right, rgb(0, 180, 156), rgb(34, 0, 46)) !important;
+    ">
 
 
 <?php
@@ -38,35 +51,38 @@ include '../error-message.php';
         <div class="container" style="padding-top:30px;">
             <div class="row">
                 <div class="col-lg-3 col-md-2"></div>
-                <div class="col-lg-6 col-md-8 login-box">
+                <div class="col-lg-6 col-md-8 login-box" style=" background-color:  #050036 !important;
+                ">
                     <div class="col-lg-12 login-title"> Add-User</div>
-                    <div class="col-lg-12 login-form">
-                        <div class="col-lg-12 login-form">
+                    <div class="col-lg-12 login-form" >
+                        <div class="col-lg-12 login-form" >
                             <form action="admin-includes/add-user-inc.php" method="POST">
                                 <div class="form-group">
                                     <label class="form-control-label">EMAIL</label>
-                                    <input type="email" class="form-control" name="email" >
+                                    <input type="email" class="form-control" name="email" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-label">FULL NAME</label>
-                                    <input type="text" class="form-control" name="name" >
+                                    <input type="text" class="form-control" name="name"  maxlength="20" minlength="6" required >
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-label">USER NAME</label>
-                                    <input type="text" class="form-control" name="userName" >
+                                    <input type="text" class="form-control" name="userName"  maxlength="20" minlength="6" required >
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-label">CONTACT-NUMBER</label>
                                     <input type="tel" class="form-control" name="mobile" 
-                                        placeholder="0771223456">
+                                        placeholder="0771223456" pattern="[0-9]{10}"  required>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-label">PASSWORD</label>
-                                    <input type="password" class="form-control" name="password" >
+                                    <input type="password" class="form-control" name="password" required
+                                    minlength="6" maxlength="20" >
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-control-label">RE-ENTER YOUR PASSWORD</label>
-                                    <input type="password" class="form-control" name="passwordRep" >
+                                    <label class="form-control-label">RE-ENTER PASSWORD</label>
+                                    <input type="password" class="form-control" name="passwordRep" required
+                                    minlength="6" maxlength="20">
                                 </div>
                                 <div class="form-group">
                                     <div class="form-check form-check-inline">

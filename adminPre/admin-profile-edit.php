@@ -29,11 +29,11 @@ session_start();
 
 </head>
 
-<body style="background-image: url('../images/study.jpg');  background-repeat: no-repeat;
-background-size: cover;  background-color:#020016e7; ">
+<body style="background-image: linear-gradient(to bottom right, rgb(0, 180, 156), rgb(34, 0, 46)) !important;
+  background-repeat: no-repeat; ">
 
-    <section style=" background-color:#020016c5; ">
-        <div style="  padding-bottom: 0px;">
+    <section >
+        <div style=" padding-bottom: 100px;  padding-top: 20px; ">
 
         <?php
             include 'admin-nav-bar.php';

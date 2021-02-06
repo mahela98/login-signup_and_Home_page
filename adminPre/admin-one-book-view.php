@@ -17,7 +17,8 @@ if(!isset($_SESSION['userId'])) {
     <link rel="stylesheet" href="../cssf/searchbar_with_options.css">
     <style>
         body {
-            background-color: rgb(218, 218, 218);
+            background-image: linear-gradient(to bottom right, rgb(0, 180, 156), rgb(34, 0, 46)) !important;
+    
         }
 
         .mybtn {

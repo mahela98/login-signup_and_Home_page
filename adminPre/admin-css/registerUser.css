@@ -12,7 +12,7 @@ body {
     height: auto;
   
     border-radius: 50px;
-    background-color: rgb(197, 197, 197);
+    background-color: rgb(0, 17, 94) !important;
     text-align: center;
     box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.16),
       10px 10px 10px 5px rgba(195, 226, 255, 0.103);
@@ -25,8 +25,8 @@ body {
     font-style:normal ;
     font-weight: bold;
     letter-spacing: 5px;
-  
-    color: #002f69;
+
+    color: #0073ff;
   }
   
   .login-form {
@@ -92,7 +92,7 @@ body {
   
   .form-control-label {
     font-size: 12px;
-    color: #2e2e2e;
+    color: #dddddd;
     font-weight: bold;
     letter-spacing: 1px;
   }

@@ -64,8 +64,8 @@ session_start();
 
 </head>
 
-<body style=" background-image: url('../images/image.jpg');  background-repeat: no-repeat;
-  background-size: cover;">
+<body  style="background-image: linear-gradient(to bottom right, rgb(0, 180, 156), rgb(34, 0, 46)) !important;
+   ">
 
 <!-- nav-bar -->
 <?php
@@ -77,7 +77,7 @@ include 'admin-nav-bar.php';
 include '../error-message.php';
 ?>
 
-<div style="  background-color:#3f3f3f9d;">
+<div>
     <div class="container" style="padding-top:70px; padding-bottom:50px">
         <div class="row">
             <div class="col col-lg-6">
@@ -91,23 +91,23 @@ include '../error-message.php';
                 <form action="admin-includes/bookInput-inc.php" method="POST">
                     <div class="form-group">
                         <label class="form-control-label">Book Name</label>
-                        <input type="text" class="form-control" name="bookName" >
+                        <input type="text" class="form-control" name="bookName" required>
                     </div>
                     <div class="form-group">
                         <label class="form-control-label">Author Name</label>
-                        <input type="text" class="form-control" name="authorName">
+                        <input type="text" class="form-control" name="authorName" required>
                     </div>
                     <div class="form-group">
                         <label class="form-control-label">Published date</label>
-                        <input type="date" class="form-control" name="publishedDate">
+                        <input type="date" class="form-control" name="publishedDate" required>
                     </div>
                     <div class="form-group">
                         <label class="form-control-label">Price</label>
-                        <input type="number" class="form-control" name="price" placeholder="Rs.">
+                        <input type="number" class="form-control" name="price" placeholder="Rs." required>
                     </div>
                     <div class="form-group">
                         <label class="form-control-label">Amount</label>
-                        <input type="number" class="form-control" name="amount">
+                        <input type="number" class="form-control" name="amount" required>
                     </div>
 
                     <div class="form-group">

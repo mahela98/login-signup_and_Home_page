@@ -16,8 +16,16 @@ if(!isset($_SESSION['userId'])) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../cssf/searchbar_with_options.css">
     <style>
+.form-control-label {
+    font-size: 12px;
+    color: #dddddd;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
         body {
-            background-color: rgb(218, 218, 218);
+           background-image: linear-gradient(to bottom right, rgb(0, 180, 156), rgb(34, 0, 46)) !important;
+    
         }
 
         .mybtn {
@@ -133,7 +141,7 @@ echo '
                                echo '
                                
                                 <input class="myinp01"
-                                 type="text" value="'.$bookName.'"  name="bookName">
+                                 type="text" value="'.$bookName.'"  name="bookName" required>
                                 </div>
                             </div>
                             <hr>
@@ -143,7 +151,7 @@ echo '
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     <input class="myinp01"
-                                    type="text" value="'.$authorName.'"  name="authorName">
+                                    type="text" value="'.$authorName.'"  name="authorName" required>
                                 </div>
                             </div>
                             <hr>
@@ -154,7 +162,7 @@ echo '
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     <input class="myinp01"
-                                    type="date" value="'.$publishedDate.'"  name="publishedDate">
+                                    type="date" value="'.$publishedDate.'"  name="publishedDate" required>
                                 </div>
                             </div>
                             <hr>
@@ -166,7 +174,7 @@ echo '
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     <input class="myinp01"
-                                    type="text" value="'.$catagory.'" name= "category">
+                                    type="text" value="'.$catagory.'" name= "category" required>
                                   
                                 </div>
                             </div>
@@ -179,7 +187,7 @@ echo '
                                     <div class="row">
                                     <div class="col-2">  Rs. </div>
                                     <div class="col-10">
-                                    <input class="myinp01" type="number" value="'.$price.'" name="price"></div>
+                                    <input class="myinp01" type="number" value="'.$price.'" name="price" required></div>
                                 </div>
                                 </div>
                             </div>
@@ -189,7 +197,7 @@ echo '
                                 <h6 class="mb-0">Amount</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input class="myinp01" type="number" value="'.$amount.'" name="amount"></div>
+                                <input class="myinp01" type="number" value="'.$amount.'" name="amount" required></div>
                            
                            
                         </div>

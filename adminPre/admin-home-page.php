@@ -31,7 +31,8 @@ if(!isset($_SESSION['userId'])) {
   </style>
 </head>
 
-<body style="  background-color:#c5c5c5c7;">
+<body style="  background-image: linear-gradient(to bottom right, rgb(0, 180, 156), rgb(34, 0, 46)) !important;
+    " >
 
 
 <?php
