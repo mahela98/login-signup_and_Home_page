@@ -133,7 +133,6 @@ $result = $conn->query($sql);
 $rows = mysqli_num_rows($result);
 echo $rows;
 ?>
-
                   </h3>
                   <span>Administrators</span>
                 </div>

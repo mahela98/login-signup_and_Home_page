@@ -4,11 +4,11 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12 p-0">
+                            <div class="col-lg-9 col-md-9 col-sm-12 p-0">
                                 <input type="text" class="form-control search-slt" placeholder="Enter Search"
                                     name="quary">
                             </div>
-                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <!-- <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                                 <select class="form-control search-slt">
                                     <option>Choose Catagory</option>
 
@@ -29,7 +29,7 @@
                                     </option>
 
                                 </select>
-                            </div>
+                            </div> -->
                             <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                                 <button type="submit" class="btn btn-danger wrn-btn" name="submit">Search</button>
                             </div>

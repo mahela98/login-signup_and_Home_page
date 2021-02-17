@@ -26,7 +26,7 @@ if(!isset($_SESSION['userId'])) {
   .login-title {
 
 
-    color: #0073ff;
+    color: #dfdfdf !important;
   }
 </style>
 
@@ -51,7 +51,7 @@ include '../error-message.php';
         <div class="container" style="padding-top:30px;">
             <div class="row">
                 <div class="col-lg-3 col-md-2"></div>
-                <div class="col-lg-6 col-md-8 login-box" style=" background-color:  #050036 !important;
+                <div class="col-lg-6 col-md-8 login-box" style=" background-color:  #0700497a !important;
                 ">
                     <div class="col-lg-12 login-title"> Add-User</div>
                     <div class="col-lg-12 login-form" >
