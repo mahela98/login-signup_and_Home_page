@@ -1,5 +1,5 @@
-<?php
-echo'
+
+
 <style>
 input:focus {
 outline: none !important;
@@ -50,7 +50,7 @@ border: none;
 <button type="button" class="changepw" data-toggle="modal" data-target="#Modal" >Change Password</button>
 
 <div class="modal fade" 
-style="background-color: rgba(1, 0, 61, 0.699);"
+style="background-color: rgba(0, 0, 0, 0.699);"
 id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content"  style="border-radius: 10px; background-color: rgba(240, 240, 240, 0.986);">
@@ -68,11 +68,11 @@ id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden=
           </div>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">New Password:</label>
-            <input type="password" class="form-control myinp01" id="newPassword" name="newPassword">
+            <input type="password" class="form-control myinp01" id="newPassword" name="newPassword" required minlength="6" maxlength="20" required>
           </div>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label ">Re-Enter New Password:</label>
-            <input type="password" class="form-control myinp01" id="reNewPassword" name="reNewPassword">
+            <input type="password" class="form-control myinp01" id="reNewPassword" name="reNewPassword" required minlength="6" maxlength="20" required>
           </div>
       </div>
       <div class="modal-footer">
@@ -85,5 +85,3 @@ id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden=
 </div>
 
 
-';
-?>

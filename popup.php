@@ -1,5 +1,5 @@
-<?php
-echo'
+<!-- <?php
+echo' -->
 <style>
 input:focus {
 outline: none !important;
@@ -50,7 +50,7 @@ border: none;
 <button type="button" class="changepw" data-toggle="modal" data-target="#Modal" >Change Password</button>
 
 <div class="modal fade" 
-style="background-color: rgba(1, 0, 61, 0.699);"
+style="background-color: rgba(0, 0, 0, 0.699);"
 id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content"  style="border-radius: 10px; background-color: rgba(240, 240, 240, 0.986);">
@@ -85,5 +85,5 @@ id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden=
 </div>
 
 
-';
-?>
+<!-- ';
+?> -->

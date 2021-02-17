@@ -3,6 +3,7 @@ session_start();
 if(!isset($_SESSION['userId'])) {
   header("location:../login.php?error=LoginFirst"); 
 }
+require_once "../includes/dbh-inc.php";
  ?>
 
 <!DOCTYPE html>
@@ -51,7 +52,16 @@ include 'admin-nav-bar.php';
                   <i class="fa fa-users fa-3x" aria-hidden="true"></i>
                 </div>
                 <div class="media-body text-right">
-                  <h3>278</h3>
+                  <h3>
+<?php
+
+$sql = "SELECT * FROM users";
+$result = $conn->query($sql);
+$rows = mysqli_num_rows($result);
+echo $rows;
+?>
+
+                  </h3>
                   <span>Users</span>
                 </div>
               </div>
@@ -68,7 +78,15 @@ include 'admin-nav-bar.php';
                   <i class="fa fa-book fa-3x" aria-hidden="true"></i>
                 </div>
                 <div class="media-body text-right">
-                  <h3>156</h3>
+                  <h3>
+                  <?php
+
+$sql = "SELECT * FROM books";
+$result = $conn->query($sql);
+$rows = mysqli_num_rows($result);
+echo $rows;
+?>
+                  </h3>
                   <span>Books</span>
                 </div>
               </div>
@@ -85,7 +103,14 @@ include 'admin-nav-bar.php';
                   <i class="fa fa-book fa-3x" aria-hidden="true"></i>
                 </div>
                 <div class="media-body text-right">
-                  <h3>645</h3>
+                  <h3>
+                    <?php
+$sql = "SELECT * FROM books WHERE bookAvailability = 1";
+$result = $conn->query($sql);
+$rows = mysqli_num_rows($result);
+echo $rows;
+?>
+</h3>
                   <span>Available Books</span>
                 </div>
               </div>
@@ -101,7 +126,15 @@ include 'admin-nav-bar.php';
                 <div class="align-self-center">
                   <i class="fa fa-adn fa-3x" aria-hidden="true"></i> </div>
                 <div class="media-body text-right">
-                  <h3>423</h3>
+                  <h3>
+                  <?php
+$sql = "SELECT * FROM users WHERE adminOrNot = 1";
+$result = $conn->query($sql);
+$rows = mysqli_num_rows($result);
+echo $rows;
+?>
+
+                  </h3>
                   <span>Administrators</span>
                 </div>
               </div>
