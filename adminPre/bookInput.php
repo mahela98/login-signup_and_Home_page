@@ -20,116 +20,136 @@ if(!isset($_SESSION['userId'])) {
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
 
     <style>
-        .mycont{
-            background-color: rgba(182, 182, 182, 0.719);
-             padding:30px;
-             border-radius:10px ;
-             align-items: center;
+        .mycont {
+            /* background-color: rgba(0, 1, 83, 0.719); */
+            background-image: linear-gradient(rgb(22, 181, 255), rgb(0, 17, 172));
+            padding: 30px;
+            border-radius: 10px;
+            align-items: center;
         }
-        label{
-            color:black;
-            font-size:15px;
-            font-weight :bold;
+
+        label {
+            color: black;
+            font-size: 15px;
+            font-weight: bold;
         }
-        input{
-            border:0px;
+
+        input {
+            border: 0px;
         }
-        textarea{
-            border:0px;
+
+        textarea {
+            border: 0px;
         }
-        input:hover{
-           border-color:rgb(156, 0, 196);
-           border:0px;
-           border-bottom: 4px solid #2e009b;
+
+        input:hover {
+            border-color: rgb(156, 0, 196);
+            border: 0px;
+            border-bottom: 4px solid #2e009b;
         }
-        textarea:hover{
-            border-color:rgb(156, 0, 196);
-           border:0px;
-           border-bottom: 5px solid #2e009b;
+
+        textarea:hover {
+            border-color: rgb(156, 0, 196);
+            border: 0px;
+            border-bottom: 5px solid #2e009b;
         }
-        h2{
+
+        h2 {
             font-size: 30px;
             font-style: normal;
             text-align: center;
-            padding:7px;
-            background-color: rgba(40, 26, 243, 0.559);
-            border-radius:10px ;
-            color:white;
+            padding: 7px;
+            background-color: rgba(7, 0, 100, 0.559);
+            border-radius: 10px;
+            color: white;
         }
-        .btn{
+
+        .btn {
             background-color: rgb(0, 21, 61);
             border: none;
         }
+
         .btn:hover {
-      background-color: rgb(54, 0, 105);
-    }
+            background-color: rgb(54, 0, 105);
+        }
     </style>
 
 </head>
 
-<body  style="background-image: linear-gradient(to bottom right, rgb(0, 180, 156), rgb(34, 0, 46)) !important;
+<body style="background-image: linear-gradient(to bottom right, rgb(0, 180, 156), rgb(34, 0, 46)) !important;
    ">
 
-<!-- nav-bar -->
-<?php
+    <!-- nav-bar -->
+    <?php
 include 'admin-nav-bar.php';
   ?>
 
-<!-- error message -->
-<?php
+    <!-- error message -->
+    <?php
 include '../error-message.php';
 ?>
 
-<div>
-    <div class="container" style="padding-top:70px; padding-bottom:50px">
-        <div class="row">
-            <div class="col col-lg-6">
+    <div>
+        <div class="container" style="padding-top:70px; padding-bottom:50px">
+
+            <div class=" col-lg-12" style="padding-bottom: 10px;">
                 <h2>Add Books </h2>
             </div>
-            </div>
+
             <!-- form -->
-            <div class="row">
-            <div class="col-12 col-lg-6 col-md-12 mycont">
-            <!-- ../includes/bookInput-inc.php -->
+
+            <div class="col-12  mycont">
+                <!-- ../includes/bookInput-inc.php -->
                 <form action="admin-includes/bookInput-inc.php" method="POST">
-                    <div class="form-group">
-                        <label class="form-control-label">Book Name</label>
-                        <input type="text" class="form-control" name="bookName" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-control-label">Author Name</label>
-                        <input type="text" class="form-control" name="authorName" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-control-label">Published date</label>
-                        <input type="date" class="form-control" name="publishedDate" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-control-label">Price</label>
-                        <input type="number" class="form-control" name="price" placeholder="Rs." required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-control-label">Amount</label>
-                        <input type="number" class="form-control" name="amount" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label  class="form-control-label" for="inputState">Category</label>
-                        <select id="category" class="form-control" name= "category">
-                          <option >Information Tec</option>
-                          <option>Law</option>
-                          <option>Managment</option>
-                          <option>Bio Science</option>
-                          <option selected>Other</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="form-group green-border-focus">
-                            <label for="exampleFormControlTextarea5">Discription</label>
-                            <textarea class="form-control" name="discription" id="discription" rows="3"></textarea>
+                    <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group">
+                            <label class="form-control-label">Book Name</label>
+                            <input type="text" class="form-control" name="bookName" required>
                         </div>
+                        <div class="form-group">
+                            <label class="form-control-label">Author Name</label>
+                            <input type="text" class="form-control" name="authorName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label">Published date</label>
+                            <input type="date" class="form-control" name="publishedDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label">Price</label>
+                            <input type="number" class="form-control" name="price" placeholder="Rs." required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label">Amount</label>
+                            <input type="number" class="form-control" name="amount" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-control-label" for="inputState">Category</label>
+                            <select id="category" class="form-control" name="category">
+                                <option>Information Tec</option>
+                                <option>Law</option>
+                                <option>Managment</option>
+                                <option>Bio Science</option>
+                                <option selected>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-group green-border-focus">
+                                <label for="exampleFormControlTextarea5">Discription</label>
+                                <textarea class="form-control" name="discription" id="discription" rows="3"></textarea>
+                            </div>
+                        </div>
+
                     </div>
+
+                    <div class="col col-lg-6">
+                        <h1>sjkfh</h1>
+                    </div>
+
+                </div>
+
                     <div class="col-lg-12 loginbttm">
                         <div class="col-lg-12  lg-padding">
                             <button type="submit" class="btn btn-primary btn-lg btn-block" name="submit">Add Book
@@ -138,12 +158,15 @@ include '../error-message.php';
                     </div>
                 </form>
             </div>
+
+
+
+
         </div>
     </div>
-    </div>
-  <!-- Footer -->
+    <!-- Footer -->
 
-  <?php
+    <?php
   include "../credits-layer.php";
   ?>
 

@@ -74,12 +74,13 @@ $sql = "SELECT * FROM books WHERE bookId = '$bookId1' ";
 $result = $conn->query($sql);
 
 $row = $result->fetch_assoc();
+$imageURL = 'adminPre/book-Images/'.$row["bookImage"];
 // echo $row["bookId"]; 
 
 // echo $row["bookName"];
 // echo $row["authorName"];
 
-echo '
+?>
     <div class="container" >
         <div class="main-body">
             <div class="row gutters-sm">
@@ -87,7 +88,13 @@ echo '
                     <div class="card" style="background-color: rgba(255, 255, 255, 0.877);">
                         <div class="card-body">
                             <div class="d-flex flex-column align-items-center text-center">
-                                <img src="images/23.jpg" alt="Admin" width="280" height="200">
+                         
+                            <img src="<?php echo $imageURL; ?>" alt="book-cover" width="280" height="200" />
+                            
+                            <!-- <img src="images/23.jpg" alt="Admin" width="280" height="200"> -->
+                          
+                          <?php
+                            echo '
                                 <div class="mt-3">
                                     <h4> '.$row["bookName"] .'</h4>
                                     <p class="text-secondary mb-1" style="color: rgb(39, 37, 37) !important;">By: '.$row["authorName"] .'</p>

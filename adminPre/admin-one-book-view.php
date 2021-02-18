@@ -21,30 +21,30 @@ if(!isset($_SESSION['userId'])) {
     
         }
 
-        .mybtn {
+        .mybtnE {
             border: 12px;
             margin-top: 25px;
             padding: 5px;
             width: 100%;
-            background-color: rgb(31, 128, 255);
+            background-color: rgb(31, 128, 255) !important;
 
         }
 
-        .mybtn:hover {
-            background-color: rgba(143, 140, 0, 0.842);
+        .mybtnE:hover {
+            background-color: rgba(143, 140, 0, 0.842) !important;
 
         }
 
         .mybtnl {
             border: 12px;
-            background-color: rgb(31, 128, 255);
+            background-color: rgb(31, 128, 255) !important;
             margin-top: 25px;
             padding: 5px;
             width: 100%;
         }
 
         .mybtnl:hover {
-            background-color: rgb(160, 0, 27);
+            background-color: rgb(160, 0, 27) !important;
 
         }
     </style>
@@ -71,12 +71,13 @@ $sql = "SELECT * FROM books WHERE bookId = '$bookId1' ";
 $result = $conn->query($sql);
 
 $row = $result->fetch_assoc();
+$imageURL = 'book-Images/'.$row["bookImage"];
 // echo $row["bookId"]; 
 
 // echo $row["bookName"];
 // echo $row["authorName"];
 $message = $row["bookId"] ;
-echo '
+?>
     <div class="container">
         <div class="main-body">
             <div class="row gutters-sm">
@@ -84,7 +85,13 @@ echo '
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex flex-column align-items-center text-center">
-                                <img src="../images/23.jpg" alt="Admin" width="280" height="200">
+
+                             
+                                <img src="<?php echo $imageURL; ?>" alt="book-cover" width="280" height="200"/>
+
+                              
+                  
+                  <?php             echo '
                                 <div class="mt-3">
                                     <h4> '.$row["bookName"] .'</h4>
                                     <p class="text-secondary mb-1">'.$row["authorName"] .'</p>
@@ -167,7 +174,7 @@ echo '
 
                 <div class="col-6 col-lg-9">
                     <a href="admin-book-edit-inc.php?message='.$message.'">
-                    <button type="submit" class="mybtn btn btn-primary">Edit</button>
+                    <button type="submit" class="mybtnE btn btn-primary">Edit</button>
                 </a>
                 </div> ';
                

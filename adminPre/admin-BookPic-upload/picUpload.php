@@ -4,7 +4,7 @@ if(!isset($_SESSION['userId'])) {
   header("location:login.php?error=LoginFirst"); 
 }
 
-include '../includes/dbh-inc.php';
+include '../../includes/dbh-inc.php';
 $UserID=$_SESSION['userId'];
 
 // File upload path
