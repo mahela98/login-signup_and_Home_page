@@ -1,7 +1,11 @@
 <?php
-// Include the database configuration file
+session_start();
+if(!isset($_SESSION['userId'])) {
+  header("location:login.php?error=LoginFirst"); 
+}
+
 include '../includes/dbh-inc.php';
-$statusMsg = '';
+ $UserID=$_SESSION['userId'];
 
 // File upload path
 $targetDir = "../profile-images/";
@@ -10,28 +14,31 @@ $targetFilePath = $targetDir . $fileName;
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
 
 if(isset($_POST["save_profile"]) && !empty($_FILES["file"]["name"])){
-    // Allow certain file formats
+
     $allowTypes = array('jpg','png','jpeg');
     if(in_array($fileType, $allowTypes)){
-        // Upload file to server
+        // Upload file to to the folder
         if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
             // Insert image file name into database
-            $insert = $conn->query("INSERT into images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())");
+            $insert = $conn->query("UPDATE users SET imageURL = '".$fileName."' WHERE userId = '".$UserID."';");
+
             if($insert){
-                $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
+                // echo "The file ".$fileName. " has been uploaded successfully.";
+                header('location:../profile-page.php?message=ProfilePicUploadedSuccessfully');
+                // echo $fileName;
+                // echo $UserID;
             }else{
-                $statusMsg = "File upload failed, please try again.";
+                echo "File upload failed, please try again.";
             } 
         }else{
-            $statusMsg = "Sorry, there was an error uploading your file.";
+            echo "Sorry, there was an error uploading your file.";
         }
     }else{
-        $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
+        echo 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
     }
 }else{
-    $statusMsg = 'Please select a file to upload.';
+    echo 'Please select a file to upload.';
 }
 
-// Display status message
-echo $statusMsg;
+
 ?>
