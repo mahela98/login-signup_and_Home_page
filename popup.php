@@ -1,5 +1,4 @@
-<!-- <?php
-echo' -->
+
 <style>
 input:focus {
 outline: none !important;
@@ -85,5 +84,3 @@ id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden=
 </div>
 
 
-<!-- ';
-?> -->

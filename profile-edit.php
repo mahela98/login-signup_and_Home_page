@@ -55,6 +55,15 @@ background-size: cover;  background-color:#020016e7; ">
             <?php
             include 'navigation-bar.php';
             ?>
+            <?php 
+
+$userID=$_SESSION["userId"];
+require_once "includes/dbh-inc.php";
+$sql = "SELECT * FROM users WHERE userId = '$userID'";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+$imageURL = 'profile-images/'.$row["imageURL"];
+?>
             <div style="padding-bottom: 70px;"></div>
             <div class="container">
                 <div class="main-body">
@@ -63,20 +72,14 @@ background-size: cover;  background-color:#020016e7; ">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex flex-column align-items-center text-center">
-                                        <img src="images/image.jpg" alt="Admin" class="rounded-circle" width="150"
-                                            height="150">
-                                        <?php 
-
-$userID=$_SESSION["userId"];
-require_once "includes/dbh-inc.php";
-$sql = "SELECT * FROM users WHERE userId = '$userID'";
-$result = $conn->query($sql);
-$row = $result->fetch_assoc();
-?>
+                                    <img src="<?php echo $imageURL; ?>" alt="Admin" class="rounded-circle" width="150"
+                                        height="150"/>
+                                       
+                                        
                                         <?php
                                         echo '
                                     <div class="mt-3">
-                                        <h4>'.$row["userName"].'</h4>
+                                        <h4>'.$row["userName"].'</h4>   
                                         <p class="text-secondary mb-1">Contact : '.$row["mobile"].'</p>
                                         <p class="text-muted font-size-sm" </p> </div> </div> </div> </div> </div> <div
                                             class="col-md-8">

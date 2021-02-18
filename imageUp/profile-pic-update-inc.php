@@ -4,12 +4,12 @@ include '../includes/dbh-inc.php';
 $statusMsg = '';
 
 // File upload path
-$targetDir = "../adminPre/book-Images/";
+$targetDir = "../profile-images/";
 $fileName = basename($_FILES["file"]["name"]);
 $targetFilePath = $targetDir . $fileName;
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
 
-if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
+if(isset($_POST["save_profile"]) && !empty($_FILES["file"]["name"])){
     // Allow certain file formats
     $allowTypes = array('jpg','png','jpeg');
     if(in_array($fileType, $allowTypes)){

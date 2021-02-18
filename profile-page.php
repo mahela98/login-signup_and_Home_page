@@ -31,23 +31,30 @@ background-size: cover;  background-color:#020016e7; ">
         <div class="container">
             <div class="main-body">
 
-
-
-                <div class="row gutters-sm">
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex flex-column align-items-center text-center">
-                                    <img src="images/image.jpg" alt="Admin" class="rounded-circle" width="150"
-                                        height="150">
-<?php 
+            <?php 
 
 $userID=$_SESSION["userId"];
 require_once "includes/dbh-inc.php";
 $sql = "SELECT * FROM users WHERE userId = '$userID'";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
+
+
+$imageURL = 'profile-images/'.$row["imageURL"];
 ?>
+
+                <div class="row gutters-sm">
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex flex-column align-items-center text-center">
+                                    <!-- <img src="images/image.jpg" alt="Admin" class="rounded-circle" width="150"
+                                        height="150"> -->
+                                        <img src="<?php echo $imageURL; ?>" alt="profile-picture" class="rounded-circle" width="150"
+                                        height="150"/>
+                                        
+                                        <?php  include 'profilePic-Update.php';  ?>
+                                        
                                         <?php
                                         echo '
                                     <div class="mt-3">
