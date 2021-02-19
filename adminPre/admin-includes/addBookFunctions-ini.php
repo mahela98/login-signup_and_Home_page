@@ -10,21 +10,23 @@ function emptyBookInput($bookName,$authorName){
    return $result;
 }
 
-function createBook($conn,$bookName,$authorName,$publishedDate,$price,$amount,$category,$discription){
+function createBook($conn,$bookName,$authorName,$publishedDate,$price,$amount,$category,$discription,$fileName){
     $stmt = mysqli_stmt_init($conn);
-    $sql = "INSERT INTO books(bookName,authorName,publishedDate,price,amount,category,discription) VALUES (?,?,?,?,?,?,?);";
+    $sql = "INSERT INTO books(bookName,authorName,publishedDate,price,amount,category,discription,bookImage) VALUES (?,?,?,?,?,?,?,?);";
   
    if (!mysqli_stmt_prepare($stmt,$sql)){
        header("location: ../adminPre/bookInput.php?error=stmtFaild4");
        exit();
             }
 
-   mysqli_stmt_bind_param($stmt,"sssssss",$bookName,$authorName,$publishedDate,$price,$amount,$category,$discription);
+   mysqli_stmt_bind_param($stmt,"ssssssss",$bookName,$authorName,$publishedDate,$price,$amount,$category,$discription,$fileName);
    mysqli_stmt_execute($stmt); 
 
    mysqli_stmt_close($stmt);
 
-   header("location: ../bookInput.php?error=successfullyBookAdded");
+//    -------
+return 0;
+   
    exit();}
 
 //    functions in searchbar when search

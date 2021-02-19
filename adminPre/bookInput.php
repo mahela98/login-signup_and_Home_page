@@ -100,7 +100,7 @@ include '../error-message.php';
 
             <div class="col-12  mycont">
                 <!-- ../includes/bookInput-inc.php -->
-                <form action="admin-includes/bookInput-inc.php" method="POST">
+                <form action="admin-includes/bookInput-inc.php" method="POST" enctype="multipart/form-data">
                     <div class="row">
                     <div class="col-12 col-lg-6">
                         <div class="form-group">
@@ -115,14 +115,20 @@ include '../error-message.php';
                             <label class="form-control-label">Published date</label>
                             <input type="date" class="form-control" name="publishedDate" required>
                         </div>
+                        
+
+                     
+
                         <div class="form-group">
-                            <label class="form-control-label">Price</label>
-                            <input type="number" class="form-control" name="price" placeholder="Rs." required>
+                            <div class="form-group green-border-focus">
+                                <label for="exampleFormControlTextarea5">Discription</label>
+                                <textarea class="form-control" name="discription" id="discription" rows="3"></textarea>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label class="form-control-label">Amount</label>
-                            <input type="number" class="form-control" name="amount" required>
-                        </div>
+
+                    </div>
+
+                    <div class="col col-lg-6">
 
                         <div class="form-group">
                             <label class="form-control-label" for="inputState">Category</label>
@@ -136,16 +142,22 @@ include '../error-message.php';
                         </div>
 
                         <div class="form-group">
-                            <div class="form-group green-border-focus">
-                                <label for="exampleFormControlTextarea5">Discription</label>
-                                <textarea class="form-control" name="discription" id="discription" rows="3"></textarea>
-                            </div>
+                            <label class="form-control-label">Price</label>
+                            <input type="number" class="form-control" name="price" placeholder="Rs." required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label">Amount</label>
+                            <input type="number" class="form-control" name="amount" required>
                         </div>
 
-                    </div>
+                        <!-- cove photo upload -->
+                        <div class="form-group" style="padding-top: 10px;">
+                            <div class="custom-file mb-3" >
+                                <input type="file" class="custom-file-input" id="customFile" name="file">
+                                <label class="custom-file-label" for="customFile">Choose Cover Photo</label>
+                              </div>
+                             </div>
 
-                    <div class="col col-lg-6">
-                        <h1>sjkfh</h1>
                     </div>
 
                 </div>
@@ -185,6 +197,14 @@ include '../error-message.php';
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
 
+
+<script>
+    // name of the file appear on select
+    $(".custom-file-input").on("change", function() {
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+    </script>
 
 </body>
 
