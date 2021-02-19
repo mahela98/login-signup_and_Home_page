@@ -44,7 +44,7 @@ return 0;
 
 //entered book name and author name are in the database
 function bookNameExists($conn,$bookName,$authorName){
-   $sql = "SELECT * FROM books WHERE bookName = ? OR authorName = ?;";
+   $sql = "SELECT * FROM books WHERE bookName = ? AND authorName = ?;";
    $stmt = mysqli_stmt_init($conn);
    
    if (!mysqli_stmt_prepare($stmt,$sql)) {

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -56,4 +56,4 @@ if($query->num_rows > 0){
  } 
  ?>
 </body>
-</html>
+</html> -->

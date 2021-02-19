@@ -109,7 +109,10 @@ $price=$row["price"];
 $amount=$row["amount"];
 $discription=$row["discription"];
 
-echo '
+$imageURL = 'book-Images/'.$row["bookImage"];
+
+?>
+
     <div class="container">
         <div class="main-body">
             <div class="row gutters-sm">
@@ -117,7 +120,12 @@ echo '
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex flex-column align-items-center text-center">
-                                <img src="../images/23.jpg" alt="Admin" width="280" height="200">
+
+
+                            <img src="<?php echo $imageURL; ?>" alt="book-cover" width="280" height="200"/>
+
+<?php
+                                echo '
                                 <div class="mt-3">
                                     <h4> '.$row["bookName"] .'</h4>
                                     <p class="text-secondary mb-1">'.$row["authorName"] .'</p>
