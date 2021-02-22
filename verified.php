@@ -22,6 +22,7 @@ if(isset($_GET['vkey'])){
 
         if (mysqli_query($conn, $sql)) {
             echo "account has verified";
+            
         }else{
             echo mysqli_error($conn);
         }
@@ -76,7 +77,7 @@ if(isset($_GET['vkey'])){
         //thankyou part
         <div style="padding-top: 25vh;">
             <div class=" text-center">
-                <h1 class="display-3">Thank You!</h1>
+                <h1 class="display-3">Congratulations!</h1>
                 <p class="lead"><strong>Your account is verified</strong> </p>
                 <hr>
                 <p>

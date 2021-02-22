@@ -65,9 +65,9 @@ mysqli_stmt_close($stmt);
 }
 
 
-function createUser($conn,$email,$fullName,$userName,$password){
+function createUser($conn,$email,$fullName,$userName,$password, $vkey){
     $stmt = mysqli_stmt_init($conn);
-    $sql = "INSERT INTO users (userEmail,fullName,userName,userPassword) VALUES (?,?,?,?)  ;";
+    $sql = "INSERT INTO users (userEmail,fullName,userName,userPassword,vkey) VALUES (?,?,?,?,?)  ;";
   
    if (!mysqli_stmt_prepare($stmt,$sql)) {
        header("location: ../signup.php?error=stmtFaild2");
@@ -76,12 +76,13 @@ function createUser($conn,$email,$fullName,$userName,$password){
 $hashedPassword = password_hash($password,PASSWORD_DEFAULT);
 
 
-   mysqli_stmt_bind_param($stmt,"ssss",$email,$fullName,$userName,$hashedPassword);
+   mysqli_stmt_bind_param($stmt,"sssss",$email,$fullName,$userName,$hashedPassword, $vkey);
    mysqli_stmt_execute($stmt); 
 
    mysqli_stmt_close($stmt);
 
-   header("location: ../login.php?error=signedin");
+//    header("location: ../login.php?error=signedin");
+        header("location: ../thankyou-verification-page.php?error=signedin");
    exit();
 
    
