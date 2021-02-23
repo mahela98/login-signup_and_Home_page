@@ -148,15 +148,19 @@ $checkpwd=password_verify($password,$pwdhash);
         $_SESSION['adminOrNot']= $userIdExists["adminOrNot"];
         $_SESSION['userEmail']= $userIdExists["userEmail"];
         $_SESSION['userName']= $userIdExists["userName"];
+        $_SESSION['verified']= $userIdExists["verified"];
 
-
-
-        if ($userIdExists["adminOrNot"]===1) {
-            header ("location:../adminPre/admin-home-page.php?error=successful");
+        if($userIdExists["verified"] === 1){
+            if ($userIdExists["adminOrNot"]===1 ) {
+                header ("location:../adminPre/admin-home-page.php?error=successful");
+            }
+            else{
+                header ("location:../bookSearch.php?error=successful");
+            }
+        }elseif($userIdExists["verified"] === 0){
+            header ("location:../thankyou-verification-page.php?error=notverified");
         }
-        else{
-            header ("location:../bookSearch.php?error=successful");
-        }
+       
         
         exit (); 
             } 
