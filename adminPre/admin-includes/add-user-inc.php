@@ -10,6 +10,8 @@ if (isset($_POST["submit"])) {
     $passwordRep = $_POST["passwordRep"];
     $admin = $_POST["admin"];
     $adminYesNo;
+    $vkey =  md5(time().$email);
+
 
     if($admin=='yes'){
     $adminYesNo=1;
@@ -27,7 +29,7 @@ if (usernameExists($conn,$userName,$email) !==false) {
     header("location: ../admin-add-user.php?error=userNameTaken");
     exit();  
 }
-createUser($conn,$email,$fullName,$userName, $mobile,$password,$adminYesNo);
+createUser($conn,$email,$fullName,$userName, $mobile,$password,$adminYesNo,$vkey);
 // echo $email . $admin . $adminYesNo.$mobile;
 }
 else{

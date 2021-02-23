@@ -92,7 +92,7 @@ if (isset($_POST["submit"])) {
     }else{
         // echo "This account is invalid or already verified";
         echo "<h1 class='display-3'>Error!</h1>
-            <p class='lead'><strong>This account is invalid or already verified</strong> </p>";
+            <p class='lead'><strong>This validation key is invalid or already verified</strong> </p>";
     }
 }else{
     die("problem in verification link 404");

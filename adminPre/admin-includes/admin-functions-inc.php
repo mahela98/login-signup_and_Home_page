@@ -33,9 +33,9 @@ function usernameExists($conn,$userName,$email){
     
     }
 
-    function createUser($conn,$email,$fullName,$userName, $mobile,$password,$adminYesNo){
+    function createUser($conn,$email,$fullName,$userName, $mobile,$password,$adminYesNo,$vkey){
         $stmt = mysqli_stmt_init($conn);
-        $sql = "INSERT INTO users (userEmail,fullName,userName,mobile,userPassword,adminOrNot) VALUES (?,?,?,?,?,?)  ;";
+        $sql = "INSERT INTO users (userEmail,fullName,userName,mobile,userPassword,adminOrNot,vkey) VALUES (?,?,?,?,?,?,?)  ;";
       
        if (!mysqli_stmt_prepare($stmt,$sql)) {
            header("location: ../signup.php?error=stmtFaild2");
@@ -44,10 +44,27 @@ function usernameExists($conn,$userName,$email){
     $hashedPassword = password_hash($password,PASSWORD_DEFAULT);
     
     
-       mysqli_stmt_bind_param($stmt,"ssssss",$email,$fullName,$userName, $mobile,$hashedPassword,$adminYesNo);
+       mysqli_stmt_bind_param($stmt,"sssssss",$email,$fullName,$userName, $mobile,$hashedPassword,$adminYesNo,$vkey);
        mysqli_stmt_execute($stmt); 
     
        mysqli_stmt_close($stmt);
+
+            //sending mail
+        $to = $email;
+        $subject = "Email Validation";
+        $message = "<a href = 'http://http://localhost/my_test/sem_chandima/verified.php?vkey=$vkey'>Register Account</a>
+        </br>
+            <h1> BOOK BROWSER </h1> 
+            </br>
+            <p> Your verification key :  $vkey </p>
+            </br>
+            <p> Thankyou ! </p>
+        ";
+        $headers = "From: bookbrowser98@yahoo.com \r\n";
+
+        $headers .= "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n";
+        mail($to,$subject,$message,$headers);
     
        header("location: ../admin-add-user.php?error=userAdded");
        exit();
