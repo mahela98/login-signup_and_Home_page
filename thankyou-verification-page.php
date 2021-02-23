@@ -43,11 +43,40 @@
     <div style="  background-image: linear-gradient(to bottom right, rgba(0, 132, 255, 0.733), rgba(255, 255, 0, 0.705)) !important;
     height: 100vh; ">
         //thankyou part
-        <div style="padding-top: 25vh;">
+        <div style="padding-top: 15vh;">
             <div class=" text-center">
                 <h1 class="display-3">Thank You!</h1>
-                <p class="lead"><strong>Please check your email</strong> for verify your account and for further
+                <p class="lead"><strong>Please check your email</strong> for the verfication key and for further
                     instructions .</p>
+
+                    <section class="search-sec " >
+                <div class="container ">
+                <form action="verified.php" method="post" >
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-8 col-10 "  >
+                            <div class="row" >
+                                <div class=" col-lg-8 col-12 p-0" style="align-items: center !important;">
+                                    <input type="text" class="form-control search-slt" placeholder=" verfication key"
+                                        name="tPageVKEY">
+                                </div>
+                                <div class="col-lg-4 col-12 p-0">
+                                    <button type="submit" class="btn btn-info  btn-block" name="submit">Submit</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+
+
+
+
+
+                    
                 <hr>
                 <p>
                     Having trouble? <a href="">Contact us</a>

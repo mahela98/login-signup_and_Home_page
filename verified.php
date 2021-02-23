@@ -3,38 +3,12 @@
 // if(!isset($_SESSION['userId'])) {
 //   header("location:login.php?error=LoginFirst"); 
 // }
-if(isset($_GET['vkey'])){
-    //process verification
-    $vkey = $_GET['vkey'];
-    require_once "dbh-inc.php";
-    require_once 'functions-ini.php';
-
-    $sql = "SELECT * FROM users WHERE verified = 0 AND vkey = ?;";
-    $stmt = mysqli_stmt_init($conn);
-
-    mysqli_stmt_bind_param($stmt,"s",$vkey);
-    mysqli_stmt_execute($stmt);
-    $resultData = mysqli_stmt_get_result($stmt);
-
-    if($resultData->num_rows==1){
-        //validate email
-        $sql = " UPDATE users Set verified = 1 WHERE vkey = '$vkey' LIMIT 1";
-
-        if (mysqli_query($conn, $sql)) {
-            echo "account has verified";
-            
-        }else{
-            echo mysqli_error($conn);
-        }
-
-    }else{
-        echo "This account is invalid or already verified";
-    }
 
 
-}else{
-    die("problem in verification link 404");
-}
+
+
+
+
 
  ?>
 <!DOCTYPE html>
@@ -77,8 +51,60 @@ if(isset($_GET['vkey'])){
         //thankyou part
         <div style="padding-top: 25vh;">
             <div class=" text-center">
-                <h1 class="display-3">Congratulations!</h1>
-                <p class="lead"><strong>Your account is verified</strong> </p>
+                <?php
+
+if (isset($_POST["submit"])) {
+    //process verification
+    $vkey = $_POST['tPageVKEY'];
+    require_once "includes/dbh-inc.php";
+    require_once 'includes/functions-ini.php';
+
+    $sql = "SELECT * FROM users WHERE verified = 0 AND vkey = ?;";
+
+            $stmt = mysqli_stmt_init($conn);
+
+        if (!mysqli_stmt_prepare($stmt,$sql)) {
+            header("location: ../signup.php?error=stmtFaild1");
+            exit();
+        }
+        mysqli_stmt_bind_param($stmt,"s",$vkey);
+        mysqli_stmt_execute($stmt);
+
+        $resultData = mysqli_stmt_get_result($stmt);
+
+        
+
+
+    if($resultData->num_rows==1){
+        //validate email
+        $sql = " UPDATE users Set verified = 1 WHERE vkey = '$vkey' LIMIT 1";
+
+        if (mysqli_query($conn, $sql)) {
+            echo "<h1 class='display-3'>Congratulations!</h1>
+            <p class='lead'><strong>Your account is verified</strong> </p>";
+            
+        }else{
+            echo mysqli_error($conn);
+            echo "<h1 class='display-3'>ERROR!</h1>
+            <p class='lead'><strong>error</strong> </p>";
+        }
+
+    }else{
+        // echo "This account is invalid or already verified";
+        echo "<h1 class='display-3'>Error!</h1>
+            <p class='lead'><strong>This account is invalid or already verified</strong> </p>";
+    }
+}else{
+    die("problem in verification link 404");
+}
+
+
+
+                ?>
+
+                
+
+
                 <hr>
                 <p>
                     Having trouble? <a href="">Contact us</a>

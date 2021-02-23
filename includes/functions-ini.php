@@ -73,7 +73,7 @@ function createUser($conn,$email,$fullName,$userName,$password, $vkey){
        header("location: ../signup.php?error=stmtFaild2");
        exit();
    }
-$hashedPassword = password_hash($password,PASSWORD_DEFAULT);
+    $hashedPassword = password_hash($password,PASSWORD_DEFAULT);
 
 
    mysqli_stmt_bind_param($stmt,"sssss",$email,$fullName,$userName,$hashedPassword, $vkey);
@@ -82,7 +82,27 @@ $hashedPassword = password_hash($password,PASSWORD_DEFAULT);
    mysqli_stmt_close($stmt);
 
 //    header("location: ../login.php?error=signedin");
-        header("location: ../thankyou-verification-page.php?error=signedin");
+
+//sending mail
+   $to = $email;
+   $subject = "Email Validation";
+   $message = "<a href = 'http://http://localhost/my_test/sem_chandima/verified.php?vkey=$vkey'>Register Account</a>
+   </br>
+    <h1> BOOK BROWSER </h1> 
+    </br>
+    <p> Your verification key :  $vkey </p>
+    </br>
+    <p> Thankyou ! </p>
+   ";
+   $headers = "From: bookbrowser98@yahoo.com \r\n";
+
+   $headers .= "MIME-Version: 1.0" . "\r\n";
+   $headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n";
+   mail($to,$subject,$message,$headers);
+
+   header("location: ../thankyou-verification-page.php?error=signedin");
+
+
    exit();
 
    
